@@ -17,18 +17,21 @@
       margin: 0;
       background: #f7f8fa;
       color: #222;
+      font-size: 15px;
+      line-height: 1.7;
     }
 
     header {
       background: #0a2540;
       color: #fff;
-      padding: 48px 20px;
+      padding: 56px 24px;
       text-align: center;
     }
 
     header h1 {
       margin: 0 0 8px;
-      font-size: 32px;
+      font-size: 34px;
+      font-weight: 600;
     }
 
     header p {
@@ -38,93 +41,109 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 1240px;
       margin: 0 auto;
-      padding: 32px 20px;
+      padding: 40px 24px;
     }
 
     section {
-      margin-bottom: 48px;
+      margin-bottom: 56px;
     }
 
     h2 {
-      font-size: 24px;
-      margin-bottom: 16px;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 6px;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #dbe2ea;
+      color: #0a2540;
     }
 
+    /* Fiori-like cards */
     .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-      height: 100%;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-}
+      transition: all 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
 
     .card h3 {
+      font-size: 18px;
+      font-weight: 600;
       margin-top: 0;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
     .card h3 i {
-      color: #2563eb;
+      color: #0b5ed7;
     }
 
     .card ul {
-      line-height: 1.6;
       padding-left: 20px;
+      margin: 0;
     }
 
+    /* Project lists */
     .project-list {
-  padding-left: 18px;
-  margin: 12px 0;
-  font-size: 15px;
-}
+      padding-left: 18px;
+      margin: 12px 0;
+    }
 
-.project-list li {
-  margin-bottom: 8px;
-}
+    .project-list li {
+      margin-bottom: 10px;
+    }
 
-.project-list a {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 500;
-}
+    .project-list a {
+      color: #0b5ed7;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-.project-list a:hover {
-  text-decoration: underline;
-}
+    .project-list a:hover {
+      text-decoration: underline;
+    }
+
+    /* Grid */
     .skills-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
       align-items: stretch;
     }
 
+    /* SAP-style badge */
     .badge {
-      background: #e0f2fe;
-      color: #0369a1;
+      background: #eef5ff;
+      color: #0b5ed7;
       font-size: 12px;
-      padding: 2px 8px;
-      border-radius: 999px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 8px;
       white-space: nowrap;
     }
 
     .evidence {
-      margin-top: 10px;
+      margin-top: 12px;
       font-size: 14px;
     }
 
     .evidence a {
-      color: #2563eb;
+      color: #0b5ed7;
       text-decoration: none;
+      font-weight: 500;
     }
 
     .evidence a:hover {
@@ -132,7 +151,7 @@
     }
 
     a {
-      color: #2563eb;
+      color: #0b5ed7;
       text-decoration: none;
     }
 
@@ -147,7 +166,7 @@
       color: #555;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .skills-grid {
         grid-template-columns: 1fr;
       }
@@ -170,17 +189,17 @@
         With a background in <strong>SAP Business Warehouse (BW)</strong>,
         <strong>SAP Business Objects (BOBJ)</strong>, and
         <strong>SAP Profitability and Performance Management (PaPM)</strong>,
-        I continuously strengthen my skills through hands-on learning and the application of real-world business scenarios.
+        I continuously strengthen my skills through hands-on learning and real-world business scenarios.
       </p>
       <p>
-        My experience with <strong>SAP BW-Integrated Planning (BW-IP)</strong> has further
-        developed my interest in planning and simulation scenarios. This portfolio highlights
-        my hands-on learning, emphasizing data modeling, semantic layers, and analytics-ready design.
+        My experience with <strong>SAP BW-Integrated Planning (BW-IP)</strong> further developed
+        my interest in planning and simulation scenarios, emphasizing data modeling,
+        semantic layers, and analytics-ready design.
       </p>
     </section>
 
     <section>
-      <h2>Hands-on Learning & Exploration</h2>
+      <h2>My Learning Journey</h2>
       <p>
         This section highlights SAP technologies I am actively exploring through hands-on practice,
         sample business scenarios, and continuous learning.
@@ -191,7 +210,7 @@
     </section>
 
     <section>
-      <h2>Projects</h2>
+      <h2>Upskilling</h2>
 
       <div class="skills-grid">
 
@@ -202,22 +221,22 @@
             <span class="badge">In Progress</span>
           </h3>
           <ul class="project-list">
-  <li>
-    <a href="#" target="_blank">
-      Sales Analytics Model – Space setup, graphical views, analytical model
-    </a>
-  </li>
-  <li>
-    <a href="#" target="_blank">
-      Customer & Product Master Data Modeling
-    </a>
-  </li>
-  <li>
-    <a href="#" target="_blank">
-      Data Integration & Transformation using SAP sample datasets
-    </a>
-  </li>
-</ul>
+            <li>
+              <a href="#" target="_blank">
+                Sales Analytics Model – Space setup, graphical views, analytical model
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                Customer & Product Master Data Modeling
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                Data Integration & Transformation using SAP sample datasets
+              </a>
+            </li>
+          </ul>
           <p class="evidence">
             <a href="#" target="_blank">📄 Documentation</a> ·
             <a href="#" target="_blank">📁 GitHub</a>
@@ -226,30 +245,32 @@
 
         <div class="card">
           <h3>
-            <i class="fa-solid fa-chart-pie"></i> SAP Analytics Cloud (SAC)
+            <i class="fa-solid fa-chart-pie"></i>
+            SAP Analytics Cloud (SAC)
             <span class="badge">In Progress</span>
           </h3>
           <ul class="project-list">
-  <li>
-    <a href="#" target="_blank">
-      Interactive Story for Sales & Margin Analysis
-    </a>
-  </li>
-  <li>
-    <a href="#" target="_blank">
-      Basic Planning Model – Version management & data entry
-    </a>
-  </li>
-  <li>
-    <a href="#" target="_blank">
-      Live Connection Dashboard using SAP BW / Datasphere
-    </a>
-  </li>
-</ul>
+            <li>
+              <a href="#" target="_blank">
+                Interactive Story for Sales & Margin Analysis
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                Basic Planning Model – <i>Version management & data entry</i>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                Live Connection Dashboard using SAP BW / Datasphere
+              </a>
+            </li>
+          </ul>
           <p class="evidence">
             <a href="#" target="_blank">📄 Notes</a>
           </p>
         </div>
+
       </div>
     </section>
 
@@ -261,11 +282,11 @@
         <div class="card">
           <h3><i class="fa-solid fa-chart-line"></i> Business Intelligence & Analytics</h3>
           <ul>
-            <li>Modeling (SAP BW on HANA, HANA Studio/Eclipse, SAP BW-IP, SAP PaPM)</li>
+            <li>Modeling (SAP BW on HANA, BW-IP, SAP PaPM)</li>
             <li>Extraction (SAP S/4HANA, SAP ECC)</li>
-            <li>Reporting (SAP BOBJ, SAP BW Queries, SAP AFO)</li>
-            <li>Data validation (SAP BW, SAP FPSL)</li>
-            <li>Planning and simulation (SAP BW-IP, SAP PaPM)</li>
+            <li>Reporting (SAP BOBJ, BW Queries, SAP AFO)</li>
+            <li>Data validation & reconciliation</li>
+            <li>Planning and simulation</li>
           </ul>
         </div>
 
@@ -273,18 +294,17 @@
           <h3><i class="fa-solid fa-database"></i> Data Management</h3>
           <ul>
             <li>ETL processes & data mapping</li>
-            <li>Data validation & reconciliation</li>
             <li>Roles & authorizations</li>
             <li>SQL aggregates & window functions</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3><i class="fa-solid fa-headset"></i> L2 AMS Technical & Customer Support</h3>
+          <h3><i class="fa-solid fa-headset"></i> L2 AMS Technical & Support</h3>
           <ul>
-            <li>Monitoring & troubleshooting process chains</li>
-            <li>End-user support & analysis</li>
-            <li>Documentation quality improvement</li>
+            <li>Monitoring & troubleshooting</li>
+            <li>End-user analysis & support</li>
+            <li>Documentation improvement</li>
           </ul>
         </div>
 
