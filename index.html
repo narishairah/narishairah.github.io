@@ -62,14 +62,15 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-    }
+      justify-content: space-between;
+}
 
     .card h3 {
       margin-top: 0;
       display: flex;
       align-items: center;
       gap: 8px;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
     }
 
     .card h3 i {
@@ -81,6 +82,25 @@
       padding-left: 20px;
     }
 
+    .project-list {
+  padding-left: 18px;
+  margin: 12px 0;
+  font-size: 15px;
+}
+
+.project-list li {
+  margin-bottom: 8px;
+}
+
+.project-list a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-list a:hover {
+  text-decoration: underline;
+}
     .skills-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -181,10 +201,23 @@
             SAP Datasphere
             <span class="badge">In Progress</span>
           </h3>
-          <p>
-            Hands-on practice using SAP sample business scenarios, focusing on space management,
-            data modeling, and analytics-ready views for consumption.
-          </p>
+          <ul class="project-list">
+  <li>
+    <a href="#" target="_blank">
+      Sales Analytics Model – Space setup, graphical views, analytical model
+    </a>
+  </li>
+  <li>
+    <a href="#" target="_blank">
+      Customer & Product Master Data Modeling
+    </a>
+  </li>
+  <li>
+    <a href="#" target="_blank">
+      Data Integration & Transformation using SAP sample datasets
+    </a>
+  </li>
+</ul>
           <p class="evidence">
             <a href="#" target="_blank">📄 Documentation</a> ·
             <a href="#" target="_blank">📁 GitHub</a>
@@ -193,45 +226,30 @@
 
         <div class="card">
           <h3>
-            <i class="fa-solid fa-chart-pie"></i>
-            SAP Analytics Cloud (SAC)
+            <i class="fa-solid fa-chart-pie"></i> SAP Analytics Cloud (SAC)
             <span class="badge">In Progress</span>
           </h3>
-          <p>
-            Exploring SAC for data visualization and planning, including story creation,
-            basic planning models, and integration with SAP BW and Datasphere.
-          </p>
+          <ul class="project-list">
+  <li>
+    <a href="#" target="_blank">
+      Interactive Story for Sales & Margin Analysis
+    </a>
+  </li>
+  <li>
+    <a href="#" target="_blank">
+      Basic Planning Model – Version management & data entry
+    </a>
+  </li>
+  <li>
+    <a href="#" target="_blank">
+      Live Connection Dashboard using SAP BW / Datasphere
+    </a>
+  </li>
+</ul>
           <p class="evidence">
             <a href="#" target="_blank">📄 Notes</a>
           </p>
         </div>
-
-        <div class="card">
-          <h3>
-            <i class="fa-solid fa-database"></i>
-            SAP HANA SQL & Modeling
-            <span class="badge">In Progress</span>
-          </h3>
-          <p>
-            Strengthening SQL skills with analytical functions, joins, aggregates, and
-            performance-aware modeling for reporting scenarios.
-          </p>
-          <p class="evidence">
-            <a href="#" target="_blank">📁 SQL Practice</a>
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>
-            <i class="fa-solid fa-graduation-cap"></i>
-            SAP Learning Hub & Community
-          </h3>
-          <p>
-            Continuous learning through SAP Learning Hub, tutorials, and SAP Community articles
-            to stay aligned with SAP’s data and analytics roadmap.
-          </p>
-        </div>
-
       </div>
     </section>
 
