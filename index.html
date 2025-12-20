@@ -30,6 +30,29 @@
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 24px;
+      .badge {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.evidence {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.evidence a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.evidence a:hover {
+  text-decoration: underline;
+}
 }
 
 /* Mobile-friendly */
@@ -48,11 +71,22 @@
 
   <main>
     <section>
+      <section>
+  <h2>Hands-on Learning & Exploration</h2>
+
+  <p>
+    This section highlights SAP technologies I am actively exploring through hands-on
+    practice, sample business scenarios, and continuous learning.
+  </p>
+
+  <p style="font-style: italic; color: #6b7280;">
+    Current focus (2025): SAP Datasphere, SAP Analytics Cloud, and SAP HANA SQL
+  </p>
       <h2>About Me</h2>
       <p>
-        With a background in <strong>SAP BW</strong> and <strong>SAP Profitability and Performance Management (PaPM)</strong>,
+        With a background in <strong>SAP Business Warehouse (BW)</strong>, <strong>SAP Business Objects (BOBJ)</strong> and <strong>SAP Profitability and Performance Management (PaPM)</strong>,
 I focus on SAP data and analytics solutions.
-My experience with <strong>SAP BW Integrated Planning (BW-IP)</strong> has further developed my interest in planning and simulation scenarios.
+My experience with <strong>SAP BW-Integrated Planning (BW-IP)</strong> has further developed my interest in planning and simulation scenarios.
 This portfolio highlights my hands-on learning, emphasizing data modeling, semantic layers, and analytics-ready design.
       </p>
     </section>
@@ -60,31 +94,63 @@ This portfolio highlights my hands-on learning, emphasizing data modeling, seman
     <section>
       <h2>Projects</h2>
 
-      <div class="card">
-        <h3>SAP Datasphere – Sales Analytics Model</h3>
-        <p><strong>Type:</strong> Hands-on practice (based on SAP sample scenario)</p>
-        <p><strong>Business Objective:</strong> Build a unified sales analytics model by product, region, and time for reporting and analysis.</p>
-        <p><strong>What I Implemented:</strong></p>
-        <ul>
-          <li>Space setup and access configuration</li>
-          <li>Data import and preparation</li>
-          <li>Graphical View modeling</li>
-          <li>Analytical Model creation for consumption</li>
-        </ul>
-        <div class="tags">
-          <span>SAP Datasphere</span>
-          <span>Data Builder</span>
-          <span>Graphical Views</span>
-          <span>Analytical Models</span>
-          <span>Semantic Modeling</span>
-        </div>
-        <p style="margin-top: 12px;">
-          <a href="#">Documentation</a> · <a href="#">Screenshots</a>
-        </p>
-      </div>
+        <div class="skills-grid">
 
-    </section>
+    <div class="card">
+      <h3>
+        <i class="fa-solid fa-cloud"></i> SAP Datasphere
+        <span class="badge">In Progress</span>
+      </h3>
+      <p>
+        Hands-on practice using SAP sample business scenarios, focusing on space management,
+        data modeling, and analytics-ready views for consumption.
+      </p>
+      <p class="evidence">
+        <a href="#" target="_blank">📄 Documentation</a> ·
+        <a href="#" target="_blank">📁 GitHub</a>
+      </p>
+    </div>
 
+    <div class="card">
+      <h3>
+        <i class="fa-solid fa-chart-pie"></i> SAP Analytics Cloud (SAC)
+        <span class="badge">In Progress</span>
+      </h3>
+      <p>
+        Exploring SAC for data visualization and planning, including story creation,
+        basic planning models, and integration with SAP BW and Datasphere.
+      </p>
+      <p class="evidence">
+        <a href="#" target="_blank">📄 Notes</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>
+        <i class="fa-solid fa-database"></i> SAP HANA SQL & Modeling
+        <span class="badge">In Progress</span>
+      </h3>
+      <p>
+        Strengthening SQL skills with analytical functions, joins, aggregates, and
+        performance-aware modeling for reporting scenarios.
+      </p>
+      <p class="evidence">
+        <a href="#" target="_blank">📁 SQL Practice</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>
+        <i class="fa-solid fa-graduation-cap"></i> SAP Learning Hub & Community
+      </h3>
+      <p>
+        Continuous learning through SAP Learning Hub, tutorials, and SAP Community articles
+        to stay aligned with SAP’s data and analytics roadmap.
+      </p>
+    </div>
+
+  </div>
+</section>
     <section>
   <h2>Skills</h2>
 
