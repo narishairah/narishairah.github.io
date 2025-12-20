@@ -18,19 +18,31 @@
     a { color: #2563eb; text-decoration: none; }
     a:hover { text-decoration: underline; }
     footer { text-align: center; padding: 24px; font-size: 14px; color: #555; }
+    .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Mobile-friendly */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 <body>
   <header>
     <h1>Narish</h1>
-    <p>SAP Datasphere | Analytics & Data Modeling | Hands-on Learning Portfolio</p>
+    <p>SAP Consultant | Analytics & Business Intelligence | Hands-on Learning Portfolio</p>
   </header>
 
   <main>
     <section>
       <h2>About Me</h2>
       <p>
-        I am an SAP data and analytics enthusiast focusing on <strong>SAP Datasphere</strong>.
+        I am an SAP data and analytics enthusiast focusing on <strong>SAP Business Warehouse (BW) and Profitability and Performance Management (PaPM)</strong>.
         This portfolio documents my hands-on practice using sample business scenarios,
         highlighting my understanding of data modeling, semantic layers, and analytics-ready design.
       </p>
@@ -67,49 +79,51 @@
     <section>
   <h2>Skills</h2>
 
-  <div class="card">
-    <h3>Business Intelligence & Analytics</h3>
-    <ul>
-      <li>Modeling (SAP BW on HANA, HANA Studio/Eclipse, SAP BW-IP, SAP PaPM)</li>
-      <li>Extraction (SAP S/4HANA, SAP ECC)</li>
-      <li>Reporting (SAP BOBJ, SAP BW Queries, SAP AFO)</li>
-      <li>Data validation (SAP S/4HANA, SAP ECC, SAP BW, SAP FPSL)</li>
-      <li>Data analysis and visualization (SAP BOBJ, SAP PaPM)</li>
-      <li>Planning and simulation (SAP BW-IP, SAP PaPM)</li>
-    </ul>
-  </div>
+  <div class="skills-grid">
+    <div class="card">
+      <h3>Business Intelligence & Analytics</h3>
+      <ul>
+        <li>Modeling (SAP BW on HANA, HANA Studio/Eclipse, SAP BW-IP, SAP PaPM)</li>
+        <li>Extraction (SAP S/4HANA, SAP ECC)</li>
+        <li>Reporting (SAP BOBJ, SAP BW Queries, SAP AFO)</li>
+        <li>Data validation (SAP S/4HANA, SAP ECC, SAP BW, SAP FPSL)</li>
+        <li>Data analysis and visualization (SAP BOBJ, SAP PaPM)</li>
+        <li>Planning and simulation (SAP BW-IP, SAP PaPM)</li>
+      </ul>
+    </div>
 
-  <div class="card">
-    <h3>Data Management</h3>
-    <ul>
-      <li>Data extraction</li>
-      <li>ETL process</li>
-      <li>Data mapping</li>
-      <li>Data validation</li>
-      <li>Data reconciliation</li>
-      <li>Roles and authorizations</li>
-      <li>SQL aggregates</li>
-      <li>SQL window functions</li>
-    </ul>
-  </div>
+    <div class="card">
+      <h3>Data Management</h3>
+      <ul>
+        <li>Data extraction</li>
+        <li>ETL process</li>
+        <li>Data mapping</li>
+        <li>Data validation</li>
+        <li>Data reconciliation</li>
+        <li>Roles and authorizations</li>
+        <li>SQL aggregates</li>
+        <li>SQL window functions</li>
+      </ul>
+    </div>
 
-  <div class="card">
-    <h3>L2 AMS Technical & Customer Support</h3>
-    <ul>
-      <li>Monitoring and scheduling reports</li>
-      <li>Monitoring and troubleshooting process chains</li>
-      <li>Documentation quality improvement</li>
-      <li>Data analysis and end-user support</li>
-      <li>Analytical and technical assistance</li>
-    </ul>
-  </div>
+    <div class="card">
+      <h3>L2 AMS Technical & Customer Support</h3>
+      <ul>
+        <li>Monitoring and scheduling reports</li>
+        <li>Monitoring and troubleshooting process chains</li>
+        <li>Documentation quality improvement</li>
+        <li>Data analysis and end-user support</li>
+        <li>Analytical and technical assistance</li>
+      </ul>
+    </div>
 
-  <div class="card">
-    <h3>Ticketing Tools</h3>
-    <ul>
-      <li>JIRA</li>
-      <li>ServiceNow</li>
-    </ul>
+    <div class="card">
+      <h3>Ticketing Tools</h3>
+      <ul>
+        <li>JIRA</li>
+        <li>ServiceNow</li>
+      </ul>
+    </div>
   </div>
 </section>
 
