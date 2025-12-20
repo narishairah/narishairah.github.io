@@ -166,6 +166,33 @@
       color: #555;
     }
 
+    .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.social-links a {
+  width: 56px;
+  height: 56px;
+  background: #ffffff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #0b5ed7;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  color: #084298;
+}
+    
     @media (max-width: 900px) {
       .skills-grid {
         grid-template-columns: 1fr;
@@ -223,7 +250,7 @@
           <ul class="project-list">
             <li>
               <a href="#" target="_blank">
-                Sales Analytics Model – Space setup, graphical views, analytical model
+                Sales Analytics Model – <em>Space setup, graphical views, analytical model</em>em>
               </a>
             </li>
             <li>
@@ -320,13 +347,18 @@
     </section>
 
     <section>
-      <h2>Links</h2>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/narishairah/" target="_blank">GitHub</a></li>
-        <li><a href="#">SAP Community</a></li>
-      </ul>
-    </section>
+  <h2>Connect with Me</h2>
+
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank" aria-label="LinkedIn">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+    <a href="https://github.com/narishairah/" target="_blank" aria-label="GitHub">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </div>
+</section>
 
   </main>
 
