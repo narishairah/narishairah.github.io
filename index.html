@@ -3,221 +3,294 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Narish Cataquiz| SAP Consultant Portfolio</title>
+  <title>Narish Cataquiz | SAP Consultant Portfolio</title>
+
+  <!-- Font Awesome Icons -->
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
-  
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; margin: 0; background: #f7f8fa; color: #222; }
-    header { background: #0a2540; color: #fff; padding: 48px 20px; }
-    header h1 { margin: 0 0 8px; font-size: 32px; }
-    header p { margin: 0; font-size: 16px; opacity: 0.9; }
-    main { max-width: 900px; margin: 0 auto; padding: 32px 20px; }
-    section { margin-bottom: 40px; }
-    h2 { font-size: 24px; margin-bottom: 16px; border-bottom: 2px solid #e5e7eb; padding-bottom: 6px; }
-    .card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); margin-bottom: 20px; }
-    .card h3 { margin-top: 0; }
-    .card ul { line-height: 1.6; }
-    .card h3 i { margin-right: 8px; color: #2563eb; }
-    .tags span { display: inline-block; background: #eef2ff; color: #3730a3; padding: 4px 10px; border-radius: 999px; font-size: 12px; margin: 4px 6px 0 0; }
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    footer { text-align: center; padding: 24px; font-size: 14px; color: #555; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      margin: 0;
+      background: #f7f8fa;
+      color: #222;
+    }
+
+    header {
+      background: #0a2540;
+      color: #fff;
+      padding: 48px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 20px;
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 6px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: nowrap;
+    }
+
+    .card h3 i {
+      color: #2563eb;
+    }
+
+    .card ul {
+      line-height: 1.6;
+      padding-left: 20px;
+    }
+
     .skills-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 24px;
-      .badge {
-  background: #e0f2fe;
-  color: #0369a1;
-  font-size: 12px;
-  padding: 2px 8px;
-  border-radius: 999px;
-  margin-left: 8px;
-  vertical-align: middle;
-}
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 24px;
+    }
 
-.evidence {
-  margin-top: 10px;
-  font-size: 14px;
-}
+    .badge {
+      background: #e0f2fe;
+      color: #0369a1;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
 
-.evidence a {
-  color: #2563eb;
-  text-decoration: none;
-}
+    .evidence {
+      margin-top: 10px;
+      font-size: 14px;
+    }
 
-.evidence a:hover {
-  text-decoration: underline;
-}
-}
+    .evidence a {
+      color: #2563eb;
+      text-decoration: none;
+    }
 
-/* Mobile-friendly */
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-}
+    .evidence a:hover {
+      text-decoration: underline;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>Narish Shairah Cataquiz</h1>
-
-    
     <p>SAP Consultant | Analytics & Business Intelligence | Hands-on Learning Portfolio</p>
-    </p>
-      <h2>About Me</h2>
-      <p>
-        With a background in <strong>SAP Business Warehouse (BW)</strong>, <strong>SAP Business Objects (BOBJ)</strong> and <strong>SAP Profitability and Performance Management (PaPM)</strong>,
-I focus on SAP data and analytics solutions.
-My experience with <strong>SAP BW-Integrated Planning (BW-IP)</strong> has further developed my interest in planning and simulation scenarios.
-This portfolio highlights my hands-on learning, emphasizing data modeling, semantic layers, and analytics-ready design.
-      </p>
   </header>
 
   <main>
+
     <section>
-      <section>
-  <h2>Hands-on Learning & Exploration</h2>
+      <h2>About Me</h2>
+      <p>
+        With a background in <strong>SAP Business Warehouse (BW)</strong>,
+        <strong>SAP Business Objects (BOBJ)</strong>, and
+        <strong>SAP Profitability and Performance Management (PaPM)</strong>,
+        I focus on SAP data and analytics solutions.
+      </p>
+      <p>
+        My experience with <strong>SAP BW-Integrated Planning (BW-IP)</strong> has further
+        developed my interest in planning and simulation scenarios. This portfolio highlights
+        my hands-on learning, emphasizing data modeling, semantic layers, and analytics-ready design.
+      </p>
+    </section>
 
-  <p>
-    This section highlights SAP technologies I am actively exploring through hands-on
-    practice, sample business scenarios, and continuous learning.
-  </p>
-
-  <p style="font-style: italic; color: #6b9888;">
-    Current focus (2025): SAP Datasphere, SAP Analytics Cloud, and SAP HANA SQL
+    <section>
+      <h2>Hands-on Learning & Exploration</h2>
+      <p>
+        This section highlights SAP technologies I am actively exploring through hands-on practice,
+        sample business scenarios, and continuous learning.
+      </p>
+      <p style="font-style: italic; color: #6b7280;">
+        Current focus (2025): SAP Datasphere, SAP Analytics Cloud, SAP HANA SQL
+      </p>
     </section>
 
     <section>
       <h2>Projects</h2>
 
-        <div class="skills-grid">
+      <div class="skills-grid">
 
-    <div class="card">
-      <h3>
-        <i class="fa-solid fa-cloud"></i> SAP Datasphere
-        <span class="badge">In Progress</span>
-      </h3>
-      <p>
-        Hands-on practice using SAP sample business scenarios, focusing on space management,
-        data modeling, and analytics-ready views for consumption.
-      </p>
-      <p class="evidence">
-        <a href="#" target="_blank">📄 Documentation</a> ·
-        <a href="#" target="_blank">📁 GitHub</a>
-      </p>
-    </div>
+        <div class="card">
+          <h3>
+            <i class="fa-solid fa-cloud"></i>
+            SAP Datasphere
+            <span class="badge">In Progress</span>
+          </h3>
+          <p>
+            Hands-on practice using SAP sample business scenarios, focusing on space management,
+            data modeling, and analytics-ready views for consumption.
+          </p>
+          <p class="evidence">
+            <a href="#" target="_blank">📄 Documentation</a> ·
+            <a href="#" target="_blank">📁 GitHub</a>
+          </p>
+        </div>
 
-    <div class="card">
-      <h3>
-        <i class="fa-solid fa-chart-pie"></i> SAP Analytics Cloud (SAC)
-        <span class="badge">In Progress</span>
-      </h3>
-      <p>
-        Exploring SAC for data visualization and planning, including story creation,
-        basic planning models, and integration with SAP BW and Datasphere.
-      </p>
-      <p class="evidence">
-        <a href="#" target="_blank">📄 Notes</a>
-      </p>
-    </div>
+        <div class="card">
+          <h3>
+            <i class="fa-solid fa-chart-pie"></i>
+            SAP Analytics Cloud (SAC)
+            <span class="badge">In Progress</span>
+          </h3>
+          <p>
+            Exploring SAC for data visualization and planning, including story creation,
+            basic planning models, and integration with SAP BW and Datasphere.
+          </p>
+          <p class="evidence">
+            <a href="#" target="_blank">📄 Notes</a>
+          </p>
+        </div>
 
-    <div class="card">
-      <h3>
-        <i class="fa-solid fa-database"></i> SAP HANA SQL & Modeling
-        <span class="badge">In Progress</span>
-      </h3>
-      <p>
-        Strengthening SQL skills with analytical functions, joins, aggregates, and
-        performance-aware modeling for reporting scenarios.
-      </p>
-      <p class="evidence">
-        <a href="#" target="_blank">📁 SQL Practice</a>
-      </p>
-    </div>
+        <div class="card">
+          <h3>
+            <i class="fa-solid fa-database"></i>
+            SAP HANA SQL & Modeling
+            <span class="badge">In Progress</span>
+          </h3>
+          <p>
+            Strengthening SQL skills with analytical functions, joins, aggregates, and
+            performance-aware modeling for reporting scenarios.
+          </p>
+          <p class="evidence">
+            <a href="#" target="_blank">📁 SQL Practice</a>
+          </p>
+        </div>
 
-    <div class="card">
-      <h3>
-        <i class="fa-solid fa-graduation-cap"></i> SAP Learning Hub & Community
-      </h3>
-      <p>
-        Continuous learning through SAP Learning Hub, tutorials, and SAP Community articles
-        to stay aligned with SAP’s data and analytics roadmap.
-      </p>
-    </div>
+        <div class="card">
+          <h3>
+            <i class="fa-solid fa-graduation-cap"></i>
+            SAP Learning Hub & Community
+          </h3>
+          <p>
+            Continuous learning through SAP Learning Hub, tutorials, and SAP Community articles
+            to stay aligned with SAP’s data and analytics roadmap.
+          </p>
+        </div>
 
-  </div>
-</section>
+      </div>
+    </section>
+
     <section>
-  <h2>Skills</h2>
-
-  <div class="skills-grid">
-    <div class="card">
-      <h3><i class="fa-solid fa-chart-line"></i> Business Intelligence & Analytics</h3>
-      <ul>
-        <li>Modeling (SAP BW on HANA, HANA Studio/Eclipse, SAP BW-IP, SAP PaPM)</li>
-        <li>Extraction (SAP S/4HANA, SAP ECC)</li>
-        <li>Reporting (SAP BOBJ, SAP BW Queries, SAP AFO)</li>
-        <li>Data validation (SAP S/4HANA, SAP ECC, SAP BW, SAP FPSL)</li>
-        <li>Data analysis and visualization (SAP BOBJ, SAP PaPM)</li>
-        <li>Planning and simulation (SAP BW-IP, SAP PaPM)</li>
-      </ul>
-    </div>
-
-    <div class="skills-grid">
-    <div class="card">
-      <h3><i class="fa-solid fa-database"></i> Data Management</h3>
-      <ul>
-        <li>Data extraction</li>
-        <li>ETL process</li>
-        <li>Data mapping</li>
-        <li>Data validation</li>
-        <li>Data reconciliation</li>
-        <li>Roles and authorizations</li>
-        <li>SQL aggregates</li>
-        <li>SQL window functions</li>
-      </ul>
-    </div>
+      <h2>Skills</h2>
 
       <div class="skills-grid">
-    <div class="card">
-      <h3><i class="fa-solid fa-headset"></i> L2 AMS Technical & Customer Support</h3>
-      <ul>
-        <li>Monitoring and scheduling reports</li>
-        <li>Monitoring and troubleshooting process chains</li>
-        <li>Documentation quality improvement</li>
-        <li>Data analysis and end-user support</li>
-        <li>Analytical and technical assistance</li>
-      </ul>
-    </div>
 
-        <div class="skills-grid">
-    <div class="card">
-      <h3><i class="fa-solid fa-ticket"></i> Ticketing Tools</h3>
-      <ul>
-        <li>JIRA</li>
-        <li>ServiceNow</li>
-      </ul>
-    </div>
-  </div>
-</section>
+        <div class="card">
+          <h3><i class="fa-solid fa-chart-line"></i> Business Intelligence & Analytics</h3>
+          <ul>
+            <li>Modeling (SAP BW on HANA, HANA Studio/Eclipse, SAP BW-IP, SAP PaPM)</li>
+            <li>Extraction (SAP S/4HANA, SAP ECC)</li>
+            <li>Reporting (SAP BOBJ, SAP BW Queries, SAP AFO)</li>
+            <li>Data validation (SAP BW, SAP FPSL)</li>
+            <li>Planning and simulation (SAP BW-IP, SAP PaPM)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-database"></i> Data Management</h3>
+          <ul>
+            <li>ETL processes & data mapping</li>
+            <li>Data validation & reconciliation</li>
+            <li>Roles & authorizations</li>
+            <li>SQL aggregates & window functions</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-headset"></i> L2 AMS Technical & Customer Support</h3>
+          <ul>
+            <li>Monitoring & troubleshooting process chains</li>
+            <li>End-user support & analysis</li>
+            <li>Documentation quality improvement</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-ticket"></i> Ticketing Tools</h3>
+          <ul>
+            <li>JIRA</li>
+            <li>ServiceNow</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
 
     <section>
       <h2>Links</h2>
       <ul>
         <li><a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/narishairah/ target="_blank">GitHub</a></li>
+        <li><a href="https://github.com/narishairah/" target="_blank">GitHub</a></li>
         <li><a href="#">SAP Community</a></li>
       </ul>
     </section>
+
   </main>
 
   <footer>
-    © 2025 Narish · Built as a learning portfolio
+    © 2025 Narish · Built as a hands-on learning portfolio
   </footer>
+
 </body>
 </html>
