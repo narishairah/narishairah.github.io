@@ -1,297 +1,598 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Narish Shairah Cataquiz | SAP Consultant & Analytics Portfolio</title>
+  <!-- Google Search Console verification -->
+  <meta name="google-site-verification" content="XBeddUuPoPGDLv3tKBMD5p4bvAuCUgSP-RJGhvkhRTs" />
 
-<meta name="description" content="Narish Shairah Cataquiz – SAP Consultant specializing in SAP BW, Analytics, Business Intelligence, and hands-on SAP learning portfolio." />
-<meta name="author" content="Narish Shairah Cataquiz" />
+  <title>Narish Shairah Cataquiz | SAP Consultant & Analytics Portfolio</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <!-- SEO Meta -->
+  <meta name="description" content="Narish Shairah Cataquiz – SAP Consultant specializing in SAP BW, Analytics, Business Intelligence, and hands-on SAP learning portfolio." />
+  <meta name="author" content="Narish Shairah Cataquiz" />
+  <meta name="keywords" content="Narish Shairah Cataquiz, SAP Consultant, SAP BW, SAP Analytics, SAP Business Intelligence, SAP PaPM" />
 
-<style>
-/* =====================
-   COLORS
-===================== */
-:root {
-  --dark-green: #1a2421;
-  --dark-green-soft: #2f433f;
-  --mint: #b9e3c6;
-  --mint-light: #d6f0de;
-  --mint-dark: #8fc99b;
-}
+  <!-- Open Graph -->
+  <meta property="og:title" content="Narish Shairah Cataquiz | SAP Consultant Portfolio" />
+  <meta property="og:description" content="SAP Consultant focused on Analytics, Business Intelligence, SAP BW, PaPM, and hands-on SAP projects." />
+  <meta property="og:url" content="https://narishairah.github.io/" />
+  <meta property="og:type" content="website" />
 
-/* =====================
-   BASE
-===================== */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-  margin: 0;
-  background: var(--mint);
-  color: var(--dark-green);
-  font-size: 15px;
-  line-height: 1.7;
-  transition: background 0.3s ease, color 0.3s ease;
-}
+  <!-- Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Narish Shairah Cataquiz",
+    "jobTitle": "SAP Consultant",
+    "url": "https://narishairah.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/narishcataquiz/",
+      "https://github.com/narishairah/"
+    ]
+  }
+  </script>
 
-body.dark-mode {
-  background: #000;
-  color: #fff;
-}
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 
-header {
-  background: var(--dark-green);
-  color: var(--mint);
-  padding: 56px 24px;
-  text-align: center;
-}
+  <style>
+    /* Colors */
+    :root {
+      --dark-green: #1A2421;
+      --mint-green: #B9E3C6;
+      --mint-green-light: #D6F0DE;
+      --dark-green-light: #2F433F;
+      --mint-dark: #8FC99B;
+    }
 
-main {
-  max-width: 1240px;
-  margin: auto;
-  padding: 40px 24px;
-}
+    /* Light Mode (Default) */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      margin: 0;
+      background: var(--mint-green);
+      color: var(--dark-green);
+      font-size: 15px;
+      line-height: 1.7;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-section {
-  margin-bottom: 56px;
-}
+    header {
+      background: var(--dark-green);
+      color: var(--mint-green);
+      padding: 56px 24px;
+      text-align: center;
+    }
 
-h2 {
-  font-size: 22px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--mint-dark);
-  padding-bottom: 8px;
-}
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      font-weight: 600;
+    }
 
-/* =====================
-   GRID
-===================== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 32px;
-  align-items: stretch;
-}
+    header p {
+      margin: 0;
+      font-size: 16px;
+      opacity: 0.9;
+      color: var(--mint-green);
+    }
 
-/* =====================
-   CARD
-===================== */
-.card {
-  background: var(--mint-light);
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 6px 20px rgba(26,36,33,0.25);
-  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
-}
+    main {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
 
-.card:hover {
-  background: var(--dark-green-soft);
-  color: #fff;
-  transform: translateY(-4px);
-}
+    section {
+      margin-bottom: 56px;
+    }
 
-body.dark-mode .card {
-  background: #222;
-  color: #fff;
-}
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--mint-dark);
+      color: var(--dark-green);
+    }
 
-body.dark-mode .card:hover {
-  background: var(--mint);
-  color: var(--dark-green);
-}
+    /* Cards */
+    .card {
+      background: var(--mint-green-light);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(31, 119, 68, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+      color: var(--dark-green);
+    }
 
-/* =====================
-   TITLE ROW
-===================== */
-.card h3 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0 0 12px;
-}
+    .card:hover {
+      background: var(--mint-green);
+      box-shadow: 0 8px 20px rgba(31, 119, 68, 0.35);
+      cursor: pointer;
+    }
 
-.title-row {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  max-width: 100%;
-  transition: transform 0.2s ease;
-}
+    .card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--dark-green);
+    }
 
-.card:hover .title-row {
-  transform: translateX(4px);
-}
+    .card h3 i {
+      color: var(--dark-green);
+    }
 
-/* =====================
-   TITLE + TOOLTIP
-===================== */
-.title-text {
-  max-width: 190px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  position: relative;
-}
+    .card ul {
+      padding-left: 20px;
+      margin: 0;
+    }
 
-.title-text::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 130%;
-  left: 0;
-  background: #000;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(4px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  white-space: nowrap;
-}
+    .project-list {
+      padding-left: 18px;
+      margin: 12px 0;
+    }
 
-.title-text:hover::after,
-.title-text:focus-visible::after {
-  opacity: 1;
-  transform: translateY(0);
-}
+    .project-list li {
+      margin-bottom: 10px;
+    }
 
-.title-text:focus-visible {
-  outline: 2px dashed var(--mint-dark);
-}
+    .project-list a {
+      color: var(--dark-green);
+      text-decoration: underline;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
 
-/* =====================
-   BADGE
-===================== */
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(47,67,63,0.6); }
-  70% { box-shadow: 0 0 0 10px rgba(47,67,63,0); }
-  100% { box-shadow: 0 0 0 0 rgba(47,67,63,0); }
-}
+    .project-list a:hover {
+      color: var(--mint-dark);
+    }
 
-.badge {
-  background: var(--dark-green-soft);
-  color: #fff;
-  font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-weight: 700;
-  animation: pulse 2s infinite;
-}
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 32px;
+    }
 
-/* =====================
-   DARK MODE TOGGLE
-===================== */
-.dark-mode-toggle-container {
-  text-align: center;
-  margin-bottom: 32px;
-}
+    .badge {
+      background: var(--mint-dark);
+      color: var(--mint-green-light);
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 8px;
+      white-space: nowrap;
+      font-weight: 700;
+      box-shadow: 0 3px 12px rgba(143, 201, 155, 0.6);
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
 
-#darkToggle {
-  padding: 10px 18px;
-  border-radius: 18px;
-  border: none;
-  background: #2d6237;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-}
+    .badge:hover {
+      background: var(--dark-green-light);
+      box-shadow: 0 4px 18px rgba(47, 67, 63, 0.7);
+      cursor: default;
+    }
 
-/* =====================
-   CONNECT (CENTER LOCKED)
-===================== */
-.connect-center {
-  text-align: center;
-}
+    .evidence {
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--dark-green);
+      font-weight: 500;
+    }
 
-.social-links {
-  display: inline-flex;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 16px;
-}
+    .evidence a {
+      color: var(--dark-green);
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
 
-.social-links a {
-  width: 56px;
-  height: 56px;
-  background: var(--dark-green);
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  color: var(--mint);
-  box-shadow: 0 6px 20px rgba(26,36,33,0.6);
-  transition: transform 0.2s ease;
-}
+    .evidence a:hover {
+      color: var(--mint-dark);
+    }
 
-.social-links a:hover {
-  transform: scale(1.1);
-}
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 14px;
+      color: var(--dark-green-light);
+      background: var(--mint-green-light);
+      border-top: 1px solid var(--dark-green-light);
+    }
 
-/* =====================
-   FOOTER
-===================== */
-footer {
-  text-align: center;
-  padding: 24px;
-  font-size: 14px;
-  background: var(--mint-light);
-}
-</style>
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 16px;
+    }
+
+    .social-links a {
+      width: 56px;
+      height: 56px;
+      background: var(--dark-green);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: var(--mint-green);
+      box-shadow: 0 6px 20px rgba(26, 36, 33, 0.6);
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: var(--dark-green-light);
+      box-shadow: 0 12px 36px rgba(47, 67, 63, 0.8);
+    }
+
+    /* Dark Mode Button styling (matches your screenshot) */
+    #darkToggle {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 10px 18px;
+      border-radius: 18px;
+      border: none;
+      background: #2d6237; /* dark green */
+      color: white;
+      box-shadow: 0 6px 16px rgba(45, 98, 55, 0.6);
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      margin-bottom: 32px;
+    }
+
+    #darkToggle:hover,
+    #darkToggle:focus {
+      background: #1a3a1a; /* darker green */
+      box-shadow: 0 8px 24px rgba(26, 58, 26, 0.8);
+      color: white;
+      outline: none;
+    }
+
+    /* Centering container for dark mode toggle */
+    .dark-mode-toggle-container {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* === DARK MODE STYLES === */
+    body.dark-mode {
+      background: #000;
+      color: #fff;
+    }
+
+    /* Text color for main sections in dark mode */
+    body.dark-mode section,
+    body.dark-mode h2,
+    body.dark-mode p,
+    body.dark-mode li,
+    body.dark-mode .evidence {
+      color: #fff;
+    }
+
+    /* Cards in dark mode default background and text */
+    body.dark-mode .card {
+      background: #222;
+      color: #fff;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      box-shadow: 0 4px 12px rgba(143, 201, 155, 0.3);
+    }
+
+    /* Cards hover effect in dark mode: mint green background with dark text */
+    body.dark-mode .card:hover {
+      background: var(--mint-green);
+      color: var(--dark-green);
+      box-shadow: 0 8px 20px rgba(185, 227, 198, 0.7);
+      cursor: pointer;
+    }
+
+    /* Links color in dark mode */
+    body.dark-mode .project-list a,
+    body.dark-mode .evidence a {
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+
+    body.dark-mode .project-list a:hover,
+    body.dark-mode .evidence a:hover {
+      color: var(--dark-green);
+    }
+
+    /* Badge colors for dark mode */
+    body.dark-mode .badge {
+      background: var(--mint-green-light);
+      color: var(--dark-green);
+      box-shadow: 0 3px 12px rgba(214, 240, 222, 0.9);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode .badge:hover {
+      background: var(--dark-green);
+      box-shadow: 0 4px 18px rgba(47, 67, 63, 0.9);
+      color: var(--mint-green-light);
+      cursor: default;
+    }
+
+    /* Footer dark mode */
+    body.dark-mode footer {
+      background: var(--dark-green-light);
+      color: var(--mint-green-light);
+      border-top: 1px solid var(--mint-dark);
+    }
+
+    /* Social links dark mode */
+    body.dark-mode .social-links a {
+      background: var(--mint-green-light);
+      color: var(--dark-green);
+      box-shadow: 0 6px 20px rgba(214, 240, 222, 0.7);
+      transition: all 0.3s ease;
+    }
+
+    body.dark-mode .social-links a:hover {
+      color: var(--mint-dark);
+      box-shadow: 0 12px 36px rgba(143, 201, 155, 0.9);
+    }
+
+    /* Toggle button in dark mode - keep consistent */
+    body.dark-mode #darkToggle {
+      background: #2d6237; /* same dark green */
+      color: white;
+      box-shadow: 0 6px 16px rgba(45, 98, 55, 0.6);
+    }
+
+    body.dark-mode #darkToggle:hover,
+    body.dark-mode #darkToggle:focus {
+      background: #1a3a1a;
+      box-shadow: 0 8px 24px rgba(26, 58, 26, 0.8);
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Narish Shairah Cataquiz</h1>
-  <p>SAP Consultant | Analytics & Business Intelligence</p>
-</header>
+  <header>
+    <h1>Narish Shairah Cataquiz</h1>
+    <p>SAP Consultant | Analytics & Business Intelligence</p>
+  </header>
 
-<main>
+  <main>
+    <section class="dark-mode-toggle-container">
+      <button id="darkToggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+        <i class="fa-solid fa-moon"></i> Dark Mode
+      </button>
+    </section>
 
-<section class="dark-mode-toggle-container">
-  <button id="darkToggle"><i class="fa-solid fa-moon"></i> Dark Mode</button>
-</section>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        With a background in <strong>SAP Business Warehouse (BW)</strong>,
+        <strong>SAP Business Objects (BOBJ)</strong>, and
+        <strong>SAP Profitability and Performance Management (PaPM)</strong>,
+        I continuously strengthen my skills through hands-on learning and real-world business scenarios.
+      </p>
+      <p>
+        My experience with <strong>SAP BW-Integrated Planning (BW-IP)</strong> further developed my
+        interest in planning and simulation scenarios, emphasizing data modeling,
+        semantic layers, and analytics-ready design.
+      </p>
+    </section>
 
-<section>
-  <h2>About Me</h2>
-  <p>With a background in <strong>SAP BW</strong>, <strong>SAP BOBJ</strong>, and <strong>SAP PaPM</strong>, I continuously strengthen my skills through hands-on learning.</p>
-  <p>My experience with <strong>BW-IP</strong> deepened my interest in planning, simulation, and analytics-ready design.</p>
-</section>
+    <section>
+      <h2>CURRENT FOCUS</h2>
+      <p><em>SAP PaPM, SAP BW on HANA</em></p>
+    </section>
 
-<section>
-  <h2>Current Focus</h2>
-  <ul>
-    <li>SAP Profitability and Performance Management</li>
-    <li>SAP BW on HANA</li>
-  </ul>
-</section>
+    <section>
+      <h2>UPSKILLING 2026</h2>
 
-<!-- (Remaining sections unchanged structurally; UI enhanced) -->
+      <div class="skills-grid">
 
-<section class="connect-center">
-  <h2>Connect with Me</h2>
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="https://github.com/narishairah/" target="_blank"><i class="fa-brands fa-github"></i></a>
-  </div>
-</section>
+        <div class="card">
+          <h3>
+            <i class="fa-solid fa-cloud"></i>
+            SAP Datasphere
+            <span class="badge">In Progress</span>
+          </h3>
+          <ul class="project-list">
+            <li>
+              <a href="#" target="_blank">
+                DA180 - <em>Explore SAP Datasphere and SAP Analytics Cloud End-to-End</em>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">Customer & Product Master Data Modeling</a>
+            </li>
+            <li>
+              <a href="#" target="_blank">Data Integration & Transformation using SAP sample datasets</a>
+            </li>
+          </ul>
+          <p class="evidence">
+            <a href="#" target="_blank">📄 Documentation</a> ·
+            <a href="#" target="_blank">📁 GitHub</a>
+          </p>
+        </div>
 
-</main>
+        <div class="card">
+          <h3>
+            <i class="fa-solid fa-chart-pie"></i>
+            SAP Analytics Cloud (SAC)
+            <span class="badge">In Progress</span>
+          </h3>
+          <ul class="project-list">
+            <li><a href="#" target="_blank">Interactive Story for Sales & Margin Analysis</a></li>
+            <li>
+              <a href="#" target="_blank">
+                Basic Planning Model – <i>Version management & data entry</i>
+              </a>
+            </li>
+            <li><a href="#" target="_blank">Live Connection Dashboard using SAP BW / Datasphere</a></li>
+          </ul>
+          <p class="evidence">
+            <a href="#" target="_blank">📄 Notes</a>
+          </p>
+        </div>
 
-<footer>
-  © 2025 Narish · Built as a hands-on learning portfolio
-</footer>
+      </div>
+    </section>
 
-<script>
-const toggleBtn = document.getElementById('darkToggle');
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
-</script>
+    <section>
+      <h2>Learning Platforms</h2>
+
+      <div class="skills-grid">
+
+        <div class="card">
+          <h3>
+            <i class="fa-solid fa-graduation-cap"></i>
+            SAP Learning Hub & Learning Journeys
+          </h3>
+          <ul>
+            <li>SAP PaPM Learning Journey (Configuration & Modeling)</li>
+            <li>SAP BW on HANA & BW-IP fundamentals</li>
+            <li>SAP Datasphere & SAC guided learning paths</li>
+          </ul>
+          <p class="evidence">
+            Structured, role-based SAP learning aligned with real project scenarios
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <i class="fa-solid fa-chart-simple"></i>
+            DataCamp
+          </h3>
+          <ul>
+            <li>SQL for Data Analysis</li>
+            <li>Data Modeling & Analytics fundamentals</li>
+            <li>Python & AI concepts for analytics work</li>
+          </ul>
+          <p class="evidence">
+            Hands-on exercises reinforcing analytical thinking and data foundations
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <i class="fa-solid fa-video"></i>
+            Udemy
+          </h3>
+          <ul>
+            <li>SAP BW / HANA deep dives</li>
+            <li>Analytics, reporting & visualization concepts</li>
+            <li>Supplementary technical upskilling</li>
+          </ul>
+          <p class="evidence">
+            Practical, topic-focused learning to complement SAP projects
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+
+      <div class="skills-grid">
+
+        <div class="card">
+          <h3><i class="fa-solid fa-chart-line"></i> Business Intelligence & Analytics</h3>
+          <ul>
+            <li>Modeling (SAP BW on HANA, BW-IP, SAP PaPM)</li>
+            <li>Extraction (SAP S/4HANA, SAP ECC)</li>
+            <li>Reporting (SAP BOBJ, BW Queries, SAP AFO)</li>
+            <li>Data validation & reconciliation</li>
+            <li>Planning and simulation</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-database"></i> Data Management</h3>
+          <ul>
+            <li>ETL processes & data mapping</li>
+            <li>Roles & authorizations</li>
+            <li>SQL aggregates & window functions</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-headset"></i> L2 AMS Technical & Support</h3>
+          <ul>
+            <li>Monitoring & troubleshooting</li>
+            <li>End-user analysis & support</li>
+            <li>Documentation improvement</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-ticket"></i> Ticketing Tools</h3>
+          <ul>
+            <li>JIRA</li>
+            <li>ServiceNow</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Connect with Me</h2>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/narishairah/" target="_blank" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Narish · Built as a hands-on learning portfolio
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('darkToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
+      } else {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode';
+      }
+    });
+  </script>
 
 </body>
 </html>
