@@ -128,11 +128,6 @@ This is my entire code:
       cursor: pointer;
     }
 
-    /* Specifically make h3 font white on hover in Light Mode */
-    body:not(.dark-mode) .card:hover h3 {
-      color: white;
-    }
-
     /* Card h3 */
     .card h3 {
       font-size: 18px;
@@ -152,10 +147,19 @@ This is my entire code:
       transition: color 0.3s ease;
     }
 
-    /* FontAwesome icon color and h3 color on hover in Light Mode */
-    body:not(.dark-mode) .card:hover h3 i {
-      color: white;
-    }
+    /* Make all text inside the card white on hover in Light Mode */
+body:not(.dark-mode) .card:hover {
+  color: white;
+}
+
+body:not(.dark-mode) .card:hover h3,
+body:not(.dark-mode) .card:hover h3 i,
+body:not(.dark-mode) .card:hover ul,
+body:not(.dark-mode) .card:hover ul li,
+body:not(.dark-mode) .card:hover p,
+body:not(.dark-mode) .card:hover a {
+  color: white;
+}
 
     /* FontAwesome icon color and h3 color on hover in Dark Mode */
     body.dark-mode .card:hover h3,
