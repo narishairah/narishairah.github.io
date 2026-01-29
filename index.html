@@ -537,4 +537,57 @@
           </ul>
         </div>
 
-        <div
+        <div class="card">
+          <h3><i class="fa-solid fa-database"></i> Data Platforms & Tools</h3>
+          <ul>
+            <li>SAP BW on HANA / BW-IP</li>
+            <li>SAP PaPM (Profitability & Performance Management)</li>
+            <li>SAP Datasphere</li>
+            <li>SAP Analytics Cloud (SAC)</li>
+            <li>SQL, Python (basics)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-gear"></i> SAP Technical Knowledge</h3>
+          <ul>
+            <li>BW Modeling (ADSOs, InfoObjects, CompositeProviders)</li>
+            <li>Data Transfer Process (DTP), Process Chains</li>
+            <li>Planning functions and sequences</li>
+            <li>Authorizations and Security</li>
+            <li>Configuration of SAP PaPM models</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Narish Shairah Cataquiz. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/narishairah" target="_blank" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    // Dark mode toggle
+    const toggleButton = document.getElementById('darkToggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+
+      // Change icon and text accordingly
+      const isDark = document.body.classList.contains('dark-mode');
+      toggleButton.innerHTML = isDark
+        ? '<i class="fa-solid fa-sun"></i> Light Mode'
+        : '<i class="fa-solid fa-moon"></i> Dark Mode';
+    });
+  </script>
+
+</body>
+</html>
