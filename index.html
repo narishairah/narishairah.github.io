@@ -49,6 +49,7 @@
       color: #222;
       font-size: 15px;
       line-height: 1.7;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     header {
@@ -70,8 +71,27 @@
       opacity: 0.9;
     }
 
+    /* Dark Mode Toggle Button */
+    #darkToggle {
+      margin-top: 16px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      background: #ffffff;
+      color: #0a2540;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: all 0.2s ease;
+    }
+
+    #darkToggle:hover {
+      transform: translateY(-1px);
+    }
+
     main {
-      max-width: 1240px;
+      max-width: 1600px;
+      width: 90%;
       margin: 0 auto;
       padding: 40px 24px;
     }
@@ -87,6 +107,7 @@
       padding-bottom: 8px;
       border-bottom: 1px solid #dbe2ea;
       color: #0a2540;
+      transition: color 0.3s ease, border-color 0.3s ease;
     }
 
     /* Fiori-like cards */
@@ -118,6 +139,7 @@
 
     .card h3 i {
       color: #0b5ed7;
+      transition: color 0.3s ease;
     }
 
     .card ul {
@@ -138,6 +160,7 @@
       color: #1f4fd8;
       text-decoration: none;
       font-weight: 400;
+      transition: color 0.3s ease;
     }
 
     .project-list a:hover {
@@ -150,6 +173,20 @@
       gap: 32px;
     }
 
+    /* Wider grid: 3 columns on large screens */
+    @media (min-width: 1400px) {
+      .skills-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    /* Mobile / tablet */
+    @media (max-width: 900px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .badge {
       background: #eef5ff;
       color: #0b5ed7;
@@ -157,6 +194,7 @@
       padding: 4px 10px;
       border-radius: 8px;
       white-space: nowrap;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .evidence {
@@ -167,6 +205,7 @@
     .evidence a {
       color: #0b5ed7;
       font-weight: 500;
+      transition: color 0.3s ease;
     }
 
     footer {
@@ -174,6 +213,7 @@
       padding: 24px;
       font-size: 14px;
       color: #555;
+      transition: color 0.3s ease;
     }
 
     .social-links {
@@ -203,10 +243,73 @@
       color: #084298;
     }
 
-    @media (max-width: 900px) {
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
+    /* Learning Platforms spacing */
+    .learning-platforms {
+      margin-top: 16px;
+    }
+
+    .learning-platforms .card {
+      padding: 28px;
+    }
+
+    .learning-platforms ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Dark mode styles */
+    body.dark {
+      background: #0b1220;
+      color: #e5e7eb;
+    }
+
+    body.dark header {
+      background: #020617;
+    }
+
+    body.dark h2 {
+      color: #93c5fd;
+      border-color: #1e293b;
+    }
+
+    body.dark .card {
+      background: #020617;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    body.dark .badge {
+      background: #1e293b;
+      color: #93c5fd;
+    }
+
+    body.dark a {
+      color: #93c5fd;
+    }
+
+    body.dark footer {
+      color: #94a3b8;
+    }
+
+    body.dark .card h3 i {
+      color: #93c5fd;
+    }
+
+    body.dark .project-list a {
+      color: #93c5fd;
+    }
+
+    body.dark .evidence a {
+      color: #93c5fd;
+    }
+
+    body.dark .social-links a {
+      background: #1e293b;
+      color: #93c5fd;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    body.dark .social-links a:hover {
+      color: #bfdbfe;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.6);
     }
   </style>
 </head>
@@ -216,6 +319,7 @@
 <header>
   <h1>Narish Shairah Cataquiz</h1>
   <p>SAP Consultant | Analytics & Business Intelligence</p>
+  <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
 </header>
 
 <main>
@@ -295,7 +399,7 @@
   </div>
 </section>
 
-<section>
+<section class="learning-platforms">
   <h2>Learning Platforms</h2>
 
   <div class="skills-grid">
@@ -412,6 +516,16 @@
 <footer>
   © 2025 Narish · Built as a hands-on learning portfolio
 </footer>
+
+<script>
+  const toggle = document.getElementById('darkToggle');
+  const body = document.body;
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark');
+    toggle.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+  });
+</script>
 
 </body>
 </html>
