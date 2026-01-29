@@ -137,9 +137,10 @@ This is my entire code:
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-wrap: nowrap; /* prevent wrapping so badge stays inline */
+  white-space: nowrap;      /* prevent wrapping */
   color: var(--dark-green);
   transition: color 0.3s ease;
+  overflow-x: auto;         /* allow horizontal scroll if needed */
 }
 
     /* FontAwesome icon color in h3 */
