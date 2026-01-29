@@ -107,18 +107,19 @@ This is my entire code:
 
     /* Cards */
     .card {
-      background: var(--mint-green-light);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 4px 12px rgba(31, 119, 68, 0.2);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.3s ease;
-      color: var(--dark-green);
-      max-width: 100%;
-      box-sizing: border-box;
-    }
+  background: var(--mint-green-light);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(31, 119, 68, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  color: var(--dark-green);
+  /* Remove or increase max-width */
+  max-width: none;  /* or max-width: 500px; or whatever you want */
+  box-sizing: border-box;
+}
 
     /* Hover effect in Light Mode */
     body:not(.dark-mode) .card:hover {
