@@ -243,6 +243,12 @@
       outline: none;
     }
 
+    /* Centering container for dark mode toggle */
+    .dark-mode-toggle-container {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
     /* Dark Mode Styles */
     body.dark-mode {
       background: #121212;
@@ -300,7 +306,6 @@
         grid-template-columns: 1fr;
       }
     }
-
   </style>
 </head>
 
@@ -313,7 +318,7 @@
 
 <main>
 
-<section>
+<section class="dark-mode-toggle-container">
   <button id="darkToggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
     <i class="fa-solid fa-moon"></i> Dark Mode
   </button>
@@ -495,7 +500,7 @@
 <section>
   <h2>Connect with Me</h2>
 
-  <div class="social-links" style="justify-content: center;">
+  <div class="social-links">
     <a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank" aria-label="LinkedIn">
       <i class="fa-brands fa-linkedin"></i>
     </a>
@@ -516,7 +521,6 @@
   const toggleBtn = document.getElementById('darkToggle');
   toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    // Optionally update button text/icon
     if(document.body.classList.contains('dark-mode')) {
       toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
     } else {
