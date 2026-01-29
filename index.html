@@ -1,220 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<title>Narish Shairah Cataquiz | SAP Consultant & Analytics Portfolio</title>
 
-  <style>
-    :root {
-      --mint: #7fd6c2;
-      --dark-green: #2f433f;
-      --card-bg-light: #ffffff;
-      --card-bg-dark: #1e1e1e;
-    }
+<meta name="description" content="Narish Shairah Cataquiz – SAP Consultant specializing in SAP BW, Analytics, Business Intelligence, and SAP PaPM." />
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f6f8f7;
-      margin: 0;
-      padding: 32px;
-      color: #222;
-    }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-    h2 {
-      margin-bottom: 16px;
-    }
+<style>
+/* =====================
+   COLOR VARIABLES
+===================== */
+:root {
+  --dark-green: #2f433f;
+  --mint: #b9e3c6;
+  --mint-light: #d6f0de;
+  --bg-light: #f5f8f7;
+  --bg-dark: #0f0f0f;
+  --card-light: #ffffff;
+  --card-dark: #1c1c1c;
+  --text-light: #1f2f2a;
+  --text-dark: #ffffff;
+}
 
-    /* ===== GRID ALIGNMENT ===== */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      align-items: stretch; /* PERFECT row alignment */
-    }
+/* =====================
+   BASE
+===================== */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light);
+  line-height: 1.7;
+  transition: background 0.3s ease, color 0.3s ease;
+}
 
-    /* ===== CARD ===== */
-    .card {
-      background: var(--card-bg-light);
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
-      height: 100%;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+body.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 36px rgba(0,0,0,0.14);
-    }
+/* =====================
+   HEADER
+===================== */
+header {
+  background: var(--dark-green);
+  color: white;
+  padding: 56px 24px;
+  text-align: center;
+}
 
-    /* ===== TITLE ROW ===== */
-    .card h3 {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 0 0 12px;
-      flex-wrap: nowrap;
-    }
+header h1 {
+  margin: 0;
+  font-size: 34px;
+}
 
-    .card h3 i {
-      font-size: 18px;
-      color: var(--dark-green);
-      flex-shrink: 0;
-    }
+header p {
+  margin: 8px 0 0;
+}
 
-    .card-title-row {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      max-width: 100%;
-      cursor: default;
-      transition: transform 0.2s ease;
-    }
+/* =====================
+   LAYOUT
+===================== */
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
 
-    /* ===== SUBTLE HOVER ANIMATION ===== */
-    .card:hover .card-title-row {
-      transform: translateX(4px);
-    }
+section {
+  margin-bottom: 56px;
+}
 
-    /* ===== TITLE TRUNCATION ===== */
-    .card-title-row span:first-child {
-      max-width: 180px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--dark-green);
+  padding-bottom: 8px;
+}
 
-    /* Tooltip using title attribute */
-    .card-title-row span:first-child[title] {
-      position: relative;
-    }
+/* =====================
+   GRID
+===================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  align-items: stretch;
+}
 
-    /* ===== BADGE ===== */
-    .badge {
-      background: var(--dark-green);
-      color: #fff;
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-weight: 700;
-      white-space: nowrap;
-      box-shadow: 0 4px 14px rgba(47,67,63,0.5);
-    }
+/* =====================
+   CARD
+===================== */
+.card {
+  background: var(--card-light);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease, color 0.3s ease;
+}
 
-    /* ===== CARD CONTENT ===== */
-    .card p {
-      margin: 0;
-      line-height: 1.6;
-      color: #444;
-    }
+body.dark-mode .card {
+  background: var(--card-dark);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.6);
+}
 
-    /* ===== CONNECT WITH ME (LOCKED CENTER) ===== */
-    .connect-section {
-      margin-top: 48px;
-      text-align: center;
-    }
+.card:hover {
+  transform: translateY(-4px);
+}
 
-    .connect-section .social-links {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 24px;
-      margin-top: 16px;
-    }
+/* Light mode hover */
+.card:hover {
+  background: var(--dark-green);
+  color: white;
+}
 
-    .social-links a {
-      font-size: 24px;
-      color: var(--dark-green);
-      transition: transform 0.2s ease, color 0.2s ease;
-    }
+/* Dark mode hover */
+body.dark-mode .card:hover {
+  background: var(--mint);
+  color: var(--dark-green);
+}
 
-    .social-links a:hover {
-      transform: scale(1.15);
-      color: #000;
-    }
-  </style>
+/* =====================
+   TITLE ROW
+===================== */
+.card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+}
+
+.card h3 i {
+  flex-shrink: 0;
+}
+
+/* Title container */
+.title-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .title-row {
+  transform: translateX(4px);
+}
+
+/* =====================
+   TITLE TRUNCATION + TOOLTIP
+===================== */
+.title-text {
+  max-width: 190px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.title-text::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 130%;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.title-text:hover::after,
+.title-text:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title-text:focus-visible {
+  outline: 2px dashed var(--mint);
+}
+
+/* =====================
+   BADGE
+===================== */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(47,67,63,0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(47,67,63,0); }
+  100% { box-shadow: 0 0 0 0 rgba(47,67,63,0); }
+}
+
+.badge {
+  background: var(--dark-green);
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  animation: pulse 2s infinite;
+}
+
+body.dark-mode .badge {
+  background: var(--dark-green);
+  color: white;
+}
+
+/* =====================
+   LISTS
+===================== */
+ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* =====================
+   DARK MODE TOGGLE
+===================== */
+.toggle-container {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+#darkToggle {
+  cursor: pointer;
+  padding: 10px 18px;
+  border-radius: 18px;
+  border: none;
+  background: var(--dark-green);
+  color: white;
+  font-weight: 600;
+}
+
+/* =====================
+   CONNECT (CENTER LOCKED)
+===================== */
+.connect-section {
+  text-align: center;
+}
+
+.social-links {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.social-links a {
+  width: 56px;
+  height: 56px;
+  background: var(--dark-green);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  font-size: 26px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 14px;
+  background: var(--mint-light);
+}
+</style>
 </head>
 
 <body>
 
-  <!-- ===== BI & ANALYTICS ===== -->
-  <section>
-    <h2>BI & Analytics</h2>
+<header>
+  <h1>Narish Shairah Cataquiz</h1>
+  <p>SAP Consultant | Analytics & Business Intelligence</p>
+</header>
 
-    <div class="card-grid">
+<main>
 
-      <div class="card">
-        <h3>
-          <i class="fa-solid fa-cogs"></i>
-          <div class="card-title-row">
-            <span title="SAP Profitability and Performance Management (PaPM)">
-              SAP Profitability and Performance Management (PaPM)
-            </span>
-            <span class="badge">In Progress</span>
-          </div>
-        </h3>
-        <p>Modeling profitability logic, allocation cycles, and performance insights.</p>
-      </div>
+<div class="toggle-container">
+  <button id="darkToggle">🌙 Dark Mode</button>
+</div>
 
-      <div class="card">
-        <h3>
-          <i class="fa-solid fa-database"></i>
-          <div class="card-title-row">
-            <span title="SAP BW on HANA">SAP BW on HANA</span>
-            <span class="badge">In Progress</span>
-          </div>
-        </h3>
-        <p>Data modeling, ADSOs, transformations, and performance-optimized reporting.</p>
-      </div>
+<section>
+  <h2>Current Focus</h2>
+  <ul>
+    <li>SAP Profitability and Performance Management</li>
+    <li>SAP BW on HANA</li>
+  </ul>
+</section>
 
-      <div class="card">
-        <h3>
-          <i class="fa-solid fa-chart-bar"></i>
-          <div class="card-title-row">
-            <span title="SAP BusinessObjects (BOBJ)">
-              SAP BusinessObjects (BOBJ)
-            </span>
-            <span class="badge">In Progress</span>
-          </div>
-        </h3>
-        <p>Enterprise reporting using WebI and legacy BI tools.</p>
-      </div>
+<section>
+  <h2>BI & Analytics</h2>
+  <div class="skills-grid">
 
-      <div class="card">
-        <h3>
-          <i class="fa-solid fa-chart-pie"></i>
-          <div class="card-title-row">
-            <span title="SAP Analytics Cloud (SAC)">
-              SAP Analytics Cloud (SAC)
-            </span>
-            <span class="badge">In Progress</span>
-          </div>
-        </h3>
-        <p>Story creation, dashboards, planning models, and analytics.</p>
-      </div>
-
+    <div class="card">
+      <h3>
+        <i class="fa-solid fa-cogs"></i>
+        <div class="title-row">
+          <span class="title-text" tabindex="0" data-tooltip="SAP Profitability and Performance Management">
+            SAP Profitability and Performance Management
+          </span>
+          <span class="badge">In Progress</span>
+        </div>
+      </h3>
+      <ul>
+        <li>Cost allocation & profitability modeling</li>
+        <li>Simulation and performance logic</li>
+      </ul>
     </div>
-  </section>
 
-  <!-- ===== CONNECT ===== -->
-  <section class="connect-section">
-    <h2>Connect With Me</h2>
-    <div class="social-links">
-      <a href="mailto:narishshairah.cataquiz@gmail.com">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/narishairah" target="_blank">
-        <i class="fa-brands fa-github"></i>
-      </a>
+    <div class="card">
+      <h3>
+        <i class="fa-solid fa-database"></i>
+        <div class="title-row">
+          <span class="title-text" tabindex="0" data-tooltip="SAP BW on HANA">
+            SAP BW on HANA
+          </span>
+          <span class="badge">In Progress</span>
+        </div>
+      </h3>
+      <ul>
+        <li>ADSO modeling</li>
+        <li>Transformations & reporting</li>
+      </ul>
     </div>
-  </section>
+
+    <div class="card">
+      <h3>
+        <i class="fa-solid fa-chart-bar"></i>
+        <div class="title-row">
+          <span class="title-text" tabindex="0" data-tooltip="SAP BusinessObjects">
+            SAP BusinessObjects
+          </span>
+          <span class="badge">In Progress</span>
+        </div>
+      </h3>
+      <ul>
+        <li>Web Intelligence</li>
+        <li>Enterprise reporting</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>
+        <i class="fa-solid fa-chart-pie"></i>
+        <div class="title-row">
+          <span class="title-text" tabindex="0" data-tooltip="SAP Analytics Cloud">
+            SAP Analytics Cloud
+          </span>
+          <span class="badge">In Progress</span>
+        </div>
+      </h3>
+      <ul>
+        <li>Stories & dashboards</li>
+        <li>Planning models</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="connect-section">
+  <h2>Connect With Me</h2>
+  <div class="social-links">
+    <a href="mailto:narishshairah.cataquiz@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/narishairah" target="_blank"><i class="fa-brands fa-github"></i></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © 2025 Narish · Built as a hands-on learning portfolio
+</footer>
+
+<script>
+document.getElementById("darkToggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+</script>
 
 </body>
 </html>
