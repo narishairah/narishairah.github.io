@@ -4,36 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Google Search Console verification -->
-  <meta name="google-site-verification" content="XBeddUuPoPGDLv3tKBMD5p4bvAuCUgSP-RJGhvkhRTs" />
-
   <title>Narish Shairah Cataquiz | SAP Consultant & Analytics Portfolio</title>
-
-  <!-- SEO Meta -->
-  <meta name="description" content="Narish Shairah Cataquiz – SAP Consultant specializing in SAP BW, Analytics, Business Intelligence, and hands-on SAP learning portfolio." />
-  <meta name="author" content="Narish Shairah Cataquiz" />
-  <meta name="keywords" content="Narish Shairah Cataquiz, SAP Consultant, SAP BW, SAP Analytics, SAP Business Intelligence, SAP PaPM" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Narish Shairah Cataquiz | SAP Consultant Portfolio" />
-  <meta property="og:description" content="SAP Consultant focused on Analytics, Business Intelligence, SAP BW, PaPM, and hands-on SAP projects." />
-  <meta property="og:url" content="https://narishairah.github.io/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Person Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Narish Shairah Cataquiz",
-    "jobTitle": "SAP Consultant",
-    "url": "https://narishairah.github.io/",
-    "sameAs": [
-      "https://www.linkedin.com/in/narishcataquiz/",
-      "https://github.com/narishairah/"
-    ]
-  }
-  </script>
 
   <!-- Font Awesome -->
   <link
@@ -116,13 +87,24 @@
 
     /* Light Mode Hover */
     .card:hover {
-      background: var(--dark-green);  /* Dark green background on hover */
-      color: white;                   /* White text for readability */
-      box-shadow: 0 8px 24px rgba(26, 58, 26, 0.8); /* stronger shadow on hover */
+      background: #1a3a1a; /* dark green hover same as darkToggle hover bg */
+      color: white;
+      box-shadow: 0 8px 24px rgba(26, 58, 26, 0.8); /* strong green glow */
       cursor: pointer;
     }
 
-    /* Project / card title */
+    /* Ensure all text inside card turns white on hover in light mode */
+    .card:hover h3,
+    .card:hover h3 i,
+    .card:hover .project-list a,
+    .card:hover ul,
+    .card:hover p,
+    .card:hover .evidence,
+    .card:hover .evidence a,
+    .card:hover li {
+      color: white !important;
+    }
+
     .card h3 {
       font-size: 18px;
       font-weight: 600;
@@ -135,40 +117,16 @@
       transition: color 0.3s ease;
     }
 
-    .card:hover h3 {
-      color: white; /* Also change h3 color on card hover */
-    }
-
-    /* Icon color for h3 titles */
     .card h3 i {
       color: var(--dark-green);
       transition: color 0.3s ease;
     }
 
-    .card:hover h3 i {
-      color: white;
-    }
-
-    /* Bullet icon color for project titles (same as h3 icon color) */
-    .card h3 .badge {
-      color: white;
-      background: var(--mint-dark);
-    }
-
-    .card ul {
+    .card ul,
+    .project-list {
       padding-left: 20px;
       margin: 0;
-      color: var(--dark-green);
       transition: color 0.3s ease;
-    }
-
-    .card:hover ul {
-      color: white;
-    }
-
-    .project-list {
-      padding-left: 18px;
-      margin: 12px 0;
     }
 
     .project-list li {
@@ -182,19 +140,8 @@
       transition: color 0.3s ease;
     }
 
-    /* Hover color for project links in light mode */
-    .card:hover .project-list a {
-      color: white;
-    }
-
     .project-list a:hover {
       color: var(--mint-dark);
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 32px;
     }
 
     .badge {
@@ -221,6 +168,7 @@
       font-size: 14px;
       color: var(--dark-green);
       font-weight: 500;
+      transition: color 0.3s ease;
     }
 
     .evidence a {
@@ -261,7 +209,7 @@
       font-size: 26px;
       color: var(--mint-green);
       box-shadow: 0 6px 20px rgba(26, 36, 33, 0.6);
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       text-decoration: none;
     }
 
@@ -270,7 +218,7 @@
       box-shadow: 0 12px 36px rgba(47, 67, 63, 0.8);
     }
 
-    /* Dark Mode Button styling */
+    /* Dark Mode Button styling (matches your screenshot) */
     #darkToggle {
       cursor: pointer;
       display: inline-flex;
@@ -339,29 +287,22 @@
       box-shadow: 0 4px 12px rgba(143, 201, 155, 0.3);
     }
 
-    /* Dark Mode Hover */
+    /* Cards hover effect in dark mode: mint green background with dark green text */
     body.dark-mode .card:hover {
-      background: var(--mint-green); /* mint green background */
-      color: black;                  /* black text for readability */
+      background: var(--mint-green);
+      color: var(--dark-green);
       box-shadow: 0 8px 20px rgba(185, 227, 198, 0.7);
       cursor: pointer;
     }
 
-    /* Dark Mode: Make h3 titles white */
-    body.dark-mode .card h3 {
-      color: white;
-    }
-    /* Also h3 icon white */
+    /* Card title and icon colors in dark mode - keep white */
+    body.dark-mode .card h3,
     body.dark-mode .card h3 i {
-      color: white;
-    }
-    /* badges on h3 remain same or can be white text */
-    body.dark-mode .card h3 .badge {
-      background: var(--mint-dark);
-      color: white;
+      color: #fff;
+      transition: color 0.3s ease;
     }
 
-    /* Dark Mode: Project list links */
+    /* Links color in dark mode */
     body.dark-mode .project-list a,
     body.dark-mode .evidence a {
       color: #fff;
@@ -408,9 +349,9 @@
       box-shadow: 0 12px 36px rgba(143, 201, 155, 0.9);
     }
 
-    /* Toggle button in dark mode */
+    /* Toggle button in dark mode - keep consistent */
     body.dark-mode #darkToggle {
-      background: #2d6237;
+      background: #2d6237; /* same dark green */
       color: white;
       box-shadow: 0 6px 16px rgba(45, 98, 55, 0.6);
     }
@@ -538,12 +479,28 @@
             <span class="badge">Ongoing</span>
           </h3>
           <ul>
-            <li>Introduction to AI for Work</li>
-            <li>Python for Data Analysis Basics</li>
-            <li>SQL Fundamentals</li>
+            <li>SQL for Data Analysis</li>
+            <li>Data Modeling & Analytics fundamentals</li>
+            <li>Python & AI concepts for analytics work</li>
           </ul>
           <p class="evidence">
-            <a href="#" target="_blank">Certificate of Completion</a>
+            Hands-on exercises reinforcing analytical thinking and data foundations
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <i class="fa-solid fa-video"></i>
+            Udemy
+            <span class="badge">Ongoing</span>
+          </h3>
+          <ul>
+            <li>SAP BW / HANA deep dives</li>
+            <li>Analytics, reporting & visualization concepts</li>
+            <li>Supplementary technical upskilling</li>
+          </ul>
+          <p class="evidence">
+            Practical, topic-focused learning to complement SAP projects
           </p>
         </div>
 
@@ -554,55 +511,76 @@
       <h2>Skills</h2>
 
       <div class="skills-grid">
+
         <div class="card">
-          <h3><i class="fa-solid fa-database"></i> Data Platforms & Tools</h3>
+          <h3><i class="fa-solid fa-chart-line"></i> Business Intelligence & Analytics</h3>
           <ul>
-            <li>SAP BW on HANA / BW-IP</li>
-            <li>SAP PaPM (Profitability & Performance Management)</li>
-            <li>SAP Datasphere</li>
-            <li>SAP Analytics Cloud (SAC)</li>
-            <li>SQL, Python (basics)</li>
+            <li>Modeling (SAP BW on HANA, BW-IP, SAP PaPM)</li>
+            <li>Extraction (SAP S/4HANA, SAP ECC)</li>
+            <li>Reporting (SAP BOBJ, BW Queries, SAP AFO)</li>
+            <li>Data validation & reconciliation</li>
+            <li>Planning and simulation</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3><i class="fa-solid fa-gear"></i> SAP Technical Knowledge</h3>
+          <h3><i class="fa-solid fa-database"></i> Data Management</h3>
           <ul>
-            <li>BW Modeling (ADSOs, InfoObjects, CompositeProviders)</li>
-            <li>Data Transfer Process (DTP), Process Chains</li>
-            <li>Planning functions and sequences</li>
-            <li>Authorizations and Security</li>
-            <li>Configuration of SAP PaPM models</li>
+            <li>ETL processes & data mapping</li>
+            <li>Roles & authorizations</li>
+            <li>SQL aggregates & window functions</li>
           </ul>
         </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-headset"></i> L2 AMS Technical & Support</h3>
+          <ul>
+            <li>Monitoring & troubleshooting</li>
+            <li>End-user analysis & support</li>
+            <li>Documentation improvement</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-ticket"></i> Ticketing Tools</h3>
+          <ul>
+            <li>JIRA</li>
+            <li>ServiceNow</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Connect with Me</h2>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/narishairah/" target="_blank" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Narish Shairah Cataquiz. All rights reserved.</p>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin-in"></i>
-      </a>
-      <a href="https://github.com/narishairah" target="_blank" aria-label="GitHub">
-        <i class="fa-brands fa-github"></i>
-      </a>
-    </div>
+    © 2025 Narish · Built as a hands-on learning portfolio
   </footer>
 
   <script>
-    // Dark mode toggle
-    const toggleButton = document.getElementById('darkToggle');
-    toggleButton.addEventListener('click', () => {
+    const toggleBtn = document.getElementById('darkToggle');
+    toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
-
-      // Change icon and text accordingly
-      const isDark = document.body.classList.contains('dark-mode');
-      toggleButton.innerHTML = isDark
-        ? '<i class="fa-solid fa-sun"></i> Light Mode'
-        : '<i class="fa-solid fa-moon"></i> Dark Mode';
+      if (document.body.classList.contains('dark-mode')) {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
+      } else {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode';
+      }
     });
   </script>
+
 </body>
 </html>
