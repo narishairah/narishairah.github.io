@@ -239,6 +239,17 @@ body:not(.dark-mode) .card:hover a {
       }
     }
 
+    /* Upskilling specific grid */
+.upskilling-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .upskilling-grid {
+    grid-template-columns: 1fr;
+  }
+}
+    
     /* Badges */
 .badge {
   background: var(--mint-dark);
@@ -498,7 +509,7 @@ body:not(.dark-mode) .card:hover a {
     <section>
       <h2>UPSKILLING 2026</h2>
 
-      <div class="skills-grid">
+      <div class="skills-grid upskilling-grid">
 
         <div class="card">
           <h3>
