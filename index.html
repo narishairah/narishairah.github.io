@@ -283,6 +283,93 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* ========== DARK MODE STYLES ========== */
+
+    body.dark-mode {
+      background: var(--dark-green);
+      color: var(--mint-green-light);
+    }
+
+    body.dark-mode header {
+      background: var(--mint-dark);
+      color: var(--mint-green-light);
+    }
+
+    body.dark-mode h2 {
+      border-color: var(--mint-green-light);
+      color: var(--mint-green-light);
+    }
+
+    body.dark-mode .card {
+      background: var(--dark-green-light);
+      color: var(--mint-green-light);
+      box-shadow: 0 4px 12px rgba(185, 227, 198, 0.2);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode .card:hover {
+      background: var(--mint-dark);
+      box-shadow: 0 8px 20px rgba(185, 227, 198, 0.6);
+      cursor: pointer;
+    }
+
+    body.dark-mode .card h3,
+    body.dark-mode .card h3 i,
+    body.dark-mode .project-list a,
+    body.dark-mode .evidence a {
+      color: var(--mint-green-light);
+    }
+
+    body.dark-mode .project-list a:hover,
+    body.dark-mode .evidence a:hover {
+      color: var(--dark-green-light);
+    }
+
+    body.dark-mode .badge {
+      background: var(--mint-green-light);
+      color: var(--dark-green);
+      box-shadow: 0 3px 12px rgba(214, 240, 222, 0.8);
+    }
+
+    body.dark-mode .badge:hover {
+      background: var(--mint-green);
+      box-shadow: 0 4px 18px rgba(214, 240, 222, 1);
+      cursor: default;
+    }
+
+    body.dark-mode footer {
+      background: var(--dark-green-light);
+      color: var(--mint-green-light);
+      border-top: 1px solid var(--mint-green-light);
+    }
+
+    body.dark-mode .social-links a {
+      background: var(--mint-green-light);
+      color: var(--dark-green);
+      box-shadow: 0 6px 20px rgba(214, 240, 222, 0.7);
+    }
+
+    body.dark-mode .social-links a:hover {
+      color: var(--mint-dark);
+      box-shadow: 0 12px 36px rgba(143, 201, 155, 0.9);
+    }
+
+    body.dark-mode #darkToggle {
+      background: var(--mint-green-light);
+      color: var(--dark-green);
+      border: 2px solid var(--mint-dark);
+      box-shadow: 0 4px 14px rgba(214, 240, 222, 0.8);
+    }
+
+    body.dark-mode #darkToggle:hover,
+    body.dark-mode #darkToggle:focus {
+      background: var(--mint-dark);
+      border-color: var(--mint-dark);
+      box-shadow: 0 6px 24px rgba(143, 201, 155, 0.9);
+      color: var(--mint-green-light);
+      outline: none;
+    }
   </style>
 </head>
 
@@ -454,57 +541,4 @@
       </ul>
     </div>
 
-    <div class="card">
-      <h3><i class="fa-solid fa-headset"></i> L2 AMS Technical & Support</h3>
-      <ul>
-        <li>Monitoring & troubleshooting</li>
-        <li>End-user analysis & support</li>
-        <li>Documentation improvement</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3><i class="fa-solid fa-ticket"></i> Ticketing Tools</h3>
-      <ul>
-        <li>JIRA</li>
-        <li>ServiceNow</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <h2>Connect with Me</h2>
-
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank" aria-label="LinkedIn">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/narishairah/" target="_blank" aria-label="GitHub">
-      <i class="fa-brands fa-github"></i>
-    </a>
-  </div>
-
-</section>
-
-</main>
-
-<footer>
-  © 2025 Narish · Built as a hands-on learning portfolio
-</footer>
-
-<script>
-  const toggleBtn = document.getElementById('darkToggle');
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    if(document.body.classList.contains('dark-mode')) {
-      toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
-    } else {
-      toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode';
-    }
-  });
-</script>
-
-</body>
-</html>
+   
