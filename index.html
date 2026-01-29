@@ -78,13 +78,16 @@
       border-radius: 12px;
       border: 2px solid #ffffffcc;
       cursor: pointer;
-      font-size: 18px;
+      font-size: 16px;
       background: #0a2540;
       color: #fff;
       font-weight: 600;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: all 0.2s ease;
       user-select: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
     #darkToggle:hover, #darkToggle:focus {
@@ -330,7 +333,9 @@
 <header>
   <h1>Narish Shairah Cataquiz</h1>
   <p>SAP Consultant | Analytics & Business Intelligence</p>
-  <button id="darkToggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+  <button id="darkToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <i class="fa-solid fa-moon"></i> Dark Mode
+  </button>
 </header>
 
 <main>
@@ -534,7 +539,11 @@
 
   toggle.addEventListener('click', () => {
     body.classList.toggle('dark');
-    toggle.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+    if (body.classList.contains('dark')) {
+      toggle.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
+    } else {
+      toggle.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode';
+    }
   });
 </script>
 
