@@ -106,7 +106,7 @@ This is my entire code:
     }
 
     /* Cards */
-    .card {
+ .card {
   background: var(--mint-green-light);
   border-radius: 16px;
   padding: 24px;
@@ -116,9 +116,12 @@ This is my entire code:
   justify-content: space-between;
   transition: all 0.3s ease;
   color: var(--dark-green);
-  /* Remove or increase max-width */
-  max-width: none;  /* or max-width: 500px; or whatever you want */
   box-sizing: border-box;
+
+  width: auto; /* default width */
+  max-width: calc(100vw - 60px); /* viewport width minus 30px margin each side */
+  margin-left: 30px; /* left margin */
+  margin-right: 30px; /* right margin */
 }
 
     /* Hover effect in Light Mode */
