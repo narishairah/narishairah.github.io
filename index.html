@@ -118,10 +118,12 @@ This is my entire code:
   color: var(--dark-green);
   box-sizing: border-box;
 
-  width: auto; /* default width */
+  width: auto;
   max-width: calc(100vw - 60px); /* viewport width minus 30px margin each side */
-  margin-left: 30px; /* left margin */
-  margin-right: 30px; /* right margin */
+  margin-left: 30px;
+  margin-right: 30px;
+
+  overflow-x: auto; /* allow horizontal scroll if content too wide */
 }
 
     /* Hover effect in Light Mode */
@@ -140,7 +142,11 @@ This is my entire code:
   display: flex;
   align-items: center;
   gap: 10px;
-  white-space: nowrap;      /* prevent wrapping */
+
+  flex-wrap: nowrap;  /* Keep everything in one line */
+  white-space: nowrap; /* Prevent wrapping */
+  overflow-x: auto;   /* Scroll if too wide */
+
   color: var(--dark-green);
   transition: color 0.3s ease;
 }
@@ -249,6 +255,7 @@ body:not(.dark-mode) .card:hover a {
   box-shadow: 0 3px 12px rgba(143, 201, 155, 0.6);
   display: inline-block;
   margin-left: 10px; /* add space between title text and badge */
+  flex-shrink: 0; /* prevent badge from shrinking inside flex */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
