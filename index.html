@@ -129,17 +129,17 @@ This is my entire code:
     }
 
     /* Card h3 */
-    .card h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 0 0 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      color: var(--dark-green);
-      transition: color 0.3s ease;
-    }
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap; /* prevent wrapping so badge stays inline */
+  color: var(--dark-green);
+  transition: color 0.3s ease;
+}
 
     /* FontAwesome icon color in h3 */
     .card h3 i {
@@ -234,18 +234,19 @@ body:not(.dark-mode) .card:hover a {
     }
 
     /* Badges */
-    .badge {
-      background: var(--mint-dark);
-      color: var(--mint-green-light);
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 8px;
-      white-space: nowrap;
-      font-weight: 700;
-      box-shadow: 0 3px 12px rgba(143, 201, 155, 0.6);
-      display: inline-block;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+.badge {
+  background: var(--mint-dark);
+  color: var(--mint-green-light);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-weight: 700;
+  box-shadow: 0 3px 12px rgba(143, 201, 155, 0.6);
+  display: inline-block;
+  margin-left: 10px; /* add space between title text and badge */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
     /* Darker badge background for "In Progress" or "Ongoing" */
     .badge.in-progress {
