@@ -2,686 +2,219 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Google Search Console verification -->
-  <meta name="google-site-verification" content="XBeddUuPoPGDLv3tKBMD5p4bvAuCUgSP-RJGhvkhRTs" />
-
-  <title>Narish Shairah Cataquiz | SAP Consultant & Analytics Portfolio</title>
-
-  <!-- SEO Meta -->
-  <meta name="description" content="Narish Shairah Cataquiz – SAP Consultant specializing in SAP BW, Analytics, Business Intelligence, and hands-on SAP learning portfolio." />
-  <meta name="author" content="Narish Shairah Cataquiz" />
-  <meta name="keywords" content="Narish Shairah Cataquiz, SAP Consultant, SAP BW, SAP Analytics, SAP Business Intelligence, SAP PaPM" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Narish Shairah Cataquiz | SAP Consultant Portfolio" />
-  <meta property="og:description" content="SAP Consultant focused on Analytics, Business Intelligence, SAP BW, PaPM, and hands-on SAP projects." />
-  <meta property="og:url" content="https://narishairah.github.io/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Person Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Narish Shairah Cataquiz",
-    "jobTitle": "SAP Consultant",
-    "url": "https://narishairah.github.io/",
-    "sameAs": [
-      "https://www.linkedin.com/in/narishcataquiz/",
-      "https://github.com/narishairah/"
-    ]
-  }
-  </script>
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <style>
-    /* Colors */
     :root {
-      --dark-green: #1A2421;
-      --mint-green: #B9E3C6;
-      --mint-green-light: #D6F0DE;
-      --dark-green-light: #2F433F;
-      --mint-dark: #8FC99B;
+      --mint: #7fd6c2;
+      --dark-green: #2f433f;
+      --card-bg-light: #ffffff;
+      --card-bg-dark: #1e1e1e;
     }
 
-    /* Light Mode (Default) */
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: Arial, sans-serif;
+      background: #f6f8f7;
       margin: 0;
-      background: var(--mint-green);
-      color: var(--dark-green);
-      font-size: 15px;
-      line-height: 1.7;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    header {
-      background: var(--dark-green);
-      color: var(--mint-green);
-      padding: 56px 24px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0 0 8px;
-      font-size: 34px;
-      font-weight: 600;
-    }
-
-    header p {
-      margin: 0;
-      font-size: 16px;
-      opacity: 0.9;
-      color: var(--mint-green);
-    }
-
-    main {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 40px 24px;
-    }
-
-    section {
-      margin-bottom: 56px;
+      padding: 32px;
+      color: #222;
     }
 
     h2 {
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 20px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--mint-dark);
-      color: var(--dark-green);
+      margin-bottom: 16px;
     }
 
-    /* Cards */
+    /* ===== GRID ALIGNMENT ===== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      align-items: stretch; /* PERFECT row alignment */
+    }
+
+    /* ===== CARD ===== */
     .card {
-      background: var(--mint-green-light);
+      background: var(--card-bg-light);
       border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 4px 12px rgba(31, 119, 68, 0.2);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.3s ease;
-      color: var(--dark-green);
-      max-width: 100%;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+      height: 100%;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .card:hover {
-      background: var(--dark-green);
-      color: white;
-      box-shadow: 0 12px 36px rgba(26, 36, 33, 0.8);
-      cursor: pointer;
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.14);
     }
 
-    /* Adjust font color on hover per card in light mode */
-    .card:hover h3 {
-      color: white;
-    }
-    .card:hover h3 i {
-      color: white;
-    }
-    .card:hover .badge {
-      background: #3a5a3a;
-      color: white;
-      box-shadow: 0 6px 20px rgba(26, 58, 26, 0.7);
-      cursor: default;
-    }
-    .card:hover .project-list a,
-    .card:hover .evidence a,
-    .card:hover ul li {
-      color: white;
-    }
-    .card:hover ul li {
-      font-weight: 600;
-    }
-
-    /* Cards font color defaults */
+    /* ===== TITLE ROW ===== */
     .card h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 0 0 12px;
       display: flex;
       align-items: center;
       gap: 10px;
-      flex-wrap: wrap;
-      color: var(--dark-green);
-      transition: color 0.3s ease;
+      margin: 0 0 12px;
+      flex-wrap: nowrap;
     }
 
     .card h3 i {
+      font-size: 18px;
       color: var(--dark-green);
-      transition: color 0.3s ease;
+      flex-shrink: 0;
     }
 
-    .card ul {
-      padding-left: 20px;
-      margin: 0;
-      color: var(--dark-green);
-      transition: color 0.3s ease;
-    }
-
-    .project-list {
-      padding-left: 18px;
-      margin: 12px 0;
-    }
-
-    .project-list li {
-      margin-bottom: 10px;
-    }
-
-    .project-list a {
-      color: var(--dark-green);
-      text-decoration: underline;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    .project-list a:hover {
-      color: var(--mint-dark);
-    }
-
-    .evidence {
-      margin-top: 12px;
-      font-size: 14px;
-      color: var(--dark-green);
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .evidence a {
-      color: var(--dark-green);
-      font-weight: 600;
-      text-decoration: underline;
-      transition: color 0.3s ease;
-    }
-
-    .evidence a:hover {
-      color: var(--mint-dark);
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 32px;
-    }
-
-    .badge {
-      background: var(--mint-dark);
-      color: var(--mint-green-light);
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 8px;
-      white-space: nowrap;
-      font-weight: 700;
-      box-shadow: 0 3px 12px rgba(143, 201, 155, 0.6);
-      display: inline-block;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    /* Updated to always show In Progress, darker mint */
-    .badge {
-      background: #6b956c; /* darker mint */
-      color: white;
-      box-shadow: 0 4px 16px rgba(107, 149, 108, 0.8);
-    }
-
-    .badge:hover {
-      background: var(--dark-green-light);
-      box-shadow: 0 4px 18px rgba(47, 67, 63, 0.9);
-      cursor: default;
-      color: white;
-    }
-
-    /* Dark Mode Button styling (matches your screenshot) */
-    #darkToggle {
-      cursor: pointer;
+    .card-title-row {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      font-weight: 600;
-      font-size: 15px;
-      padding: 10px 18px;
-      border-radius: 18px;
-      border: none;
-      background: #2d6237; /* dark green */
-      color: white;
-      box-shadow: 0 6px 20px rgba(45, 98, 55, 0.6);
-      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-      user-select: none;
-      margin-bottom: 32px;
-    }
-
-    #darkToggle:hover,
-    #darkToggle:focus {
-      background: #1a3a1a; /* darker green */
-      box-shadow: 0 8px 24px rgba(26, 58, 26, 0.8);
-      color: white;
-      outline: none;
-    }
-
-    /* Centering container for dark mode toggle */
-    .dark-mode-toggle-container {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 1200px) {
-      .skills-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 900px) {
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* === DARK MODE STYLES === */
-    body.dark-mode {
-      background: #000;
-      color: #fff;
-    }
-
-    /* Text color for main sections in dark mode */
-    body.dark-mode section,
-    body.dark-mode h2,
-    body.dark-mode p,
-    body.dark-mode li,
-    body.dark-mode .evidence {
-      color: #fff;
-    }
-
-    /* Cards in dark mode default background and text */
-    body.dark-mode .card {
-      background: #222;
-      color: #fff;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      box-shadow: 0 4px 12px rgba(143, 201, 155, 0.3);
+      gap: 10px;
       max-width: 100%;
-    }
-
-    /* Cards hover effect in dark mode: mint green background with dark text */
-    body.dark-mode .card:hover {
-      background: var(--mint-green);
-      color: var(--dark-green);
-      box-shadow: 0 8px 20px rgba(185, 227, 198, 0.7);
-      cursor: pointer;
-    }
-
-    /* Cards hover font color adjustments */
-    body.dark-mode .card:hover h3 {
-      color: var(--dark-green);
-    }
-    body.dark-mode .card:hover h3 i {
-      color: var(--dark-green);
-    }
-    body.dark-mode .card:hover .badge {
-      background: var(--mint-dark);
-      color: var(--mint-green-light);
-      box-shadow: 0 4px 18px rgba(47, 67, 63, 0.9);
       cursor: default;
-    }
-    body.dark-mode .card:hover .project-list a,
-    body.dark-mode .card:hover .evidence a,
-    body.dark-mode .card:hover ul li {
-      color: var(--dark-green);
-    }
-    body.dark-mode .card:hover ul li {
-      font-weight: 600;
+      transition: transform 0.2s ease;
     }
 
-    /* Links color in dark mode */
-    body.dark-mode .project-list a,
-    body.dark-mode .evidence a {
-      color: #fff;
-      transition: color 0.3s ease;
+    /* ===== SUBTLE HOVER ANIMATION ===== */
+    .card:hover .card-title-row {
+      transform: translateX(4px);
     }
 
-    body.dark-mode .project-list a:hover,
-    body.dark-mode .evidence a:hover {
-      color: var(--dark-green);
+    /* ===== TITLE TRUNCATION ===== */
+    .card-title-row span:first-child {
+      max-width: 180px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    /* Badge colors for dark mode */
-    body.dark-mode .badge {
-      background: var(--mint-green-light);
-      color: var(--dark-green);
-      box-shadow: 0 3px 12px rgba(214, 240, 222, 0.9);
-      transition: background-color 0.3s ease, color 0.3s ease;
+    /* Tooltip using title attribute */
+    .card-title-row span:first-child[title] {
+      position: relative;
     }
 
-    body.dark-mode .badge:hover {
+    /* ===== BADGE ===== */
+    .badge {
       background: var(--dark-green);
-      box-shadow: 0 4px 18px rgba(47, 67, 63, 0.9);
-      color: var(--mint-green-light);
-      cursor: default;
+      color: #fff;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      white-space: nowrap;
+      box-shadow: 0 4px 14px rgba(47,67,63,0.5);
     }
 
-    /* Footer dark mode */
-    body.dark-mode footer {
-      background: var(--dark-green-light);
-      color: var(--mint-green-light);
-      border-top: 1px solid var(--mint-dark);
+    /* ===== CARD CONTENT ===== */
+    .card p {
+      margin: 0;
+      line-height: 1.6;
+      color: #444;
     }
 
-    /* Social links dark mode */
-    body.dark-mode .social-links a {
-      background: var(--mint-green-light);
-      color: var(--dark-green);
-      box-shadow: 0 6px 20px rgba(214, 240, 222, 0.7);
-      transition: all 0.3s ease;
+    /* ===== CONNECT WITH ME (LOCKED CENTER) ===== */
+    .connect-section {
+      margin-top: 48px;
+      text-align: center;
     }
 
-    body.dark-mode .social-links a:hover {
-      color: var(--mint-dark);
-      box-shadow: 0 12px 36px rgba(143, 201, 155, 0.9);
-    }
-
-    /* Toggle button in dark mode - keep consistent */
-    body.dark-mode #darkToggle {
-      background: #2d6237; /* same dark green */
-      color: white;
-      box-shadow: 0 6px 16px rgba(45, 98, 55, 0.6);
-    }
-
-    body.dark-mode #darkToggle:hover,
-    body.dark-mode #darkToggle:focus {
-      background: #1a3a1a;
-      box-shadow: 0 8px 24px rgba(26, 58, 26, 0.8);
-      color: white;
-    }
-
-    /* Connect With Me center */
-    .social-links {
-      display: flex;
+    .connect-section .social-links {
+      display: inline-flex;
       justify-content: center;
+      align-items: center;
       gap: 24px;
       margin-top: 16px;
     }
 
     .social-links a {
-      width: 56px;
-      height: 56px;
-      background: var(--dark-green);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      color: var(--mint-green);
-      box-shadow: 0 6px 20px rgba(26, 36, 33, 0.6);
-      transition: all 0.2s ease;
-      text-decoration: none;
+      font-size: 24px;
+      color: var(--dark-green);
+      transition: transform 0.2s ease, color 0.2s ease;
     }
 
     .social-links a:hover {
-      color: var(--dark-green-light);
-      box-shadow: 0 12px 36px rgba(47, 67, 63, 0.8);
+      transform: scale(1.15);
+      color: #000;
     }
-
-    /* Bulleted list style for CURRENT FOCUS */
-    section ul {
-      padding-left: 20px;
-      margin-top: 0;
-      color: var(--dark-green);
-      font-weight: 600;
-    }
-    body.dark-mode section ul {
-      color: #fff;
-    }
-
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Narish Shairah Cataquiz</h1>
-    <p>SAP Consultant | Analytics & Business Intelligence</p>
-  </header>
+  <!-- ===== BI & ANALYTICS ===== -->
+  <section>
+    <h2>BI & Analytics</h2>
 
-  <main>
-    <section class="dark-mode-toggle-container">
-      <button id="darkToggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
-        <i class="fa-solid fa-moon"></i> Dark Mode
-      </button>
-    </section>
+    <div class="card-grid">
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        With a background in <strong>SAP Business Warehouse (BW)</strong>,
-        <strong>SAP Business Objects (BOBJ)</strong>, and
-        <strong>SAP Profitability and Performance Management (PaPM)</strong>,
-        I continuously strengthen my skills through hands-on learning and real-world business scenarios.
-      </p>
-      <p>
-        My experience with <strong>SAP BW-Integrated Planning (BW-IP)</strong> further developed my
-        interest in planning and simulation scenarios, emphasizing data modeling,
-        semantic layers, and analytics-ready design.
-      </p>
-    </section>
-
-    <section>
-      <h2>CURRENT FOCUS</h2>
-      <ul>
-        <li>SAP Profitability and Performance Management</li>
-        <li>SAP BW on HANA</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>UPSKILLING 2026</h2>
-
-      <div class="skills-grid">
-
-        <div class="card">
-          <h3>
-            <i class="fa-solid fa-cloud"></i>
-            SAP Datasphere
+      <div class="card">
+        <h3>
+          <i class="fa-solid fa-cogs"></i>
+          <div class="card-title-row">
+            <span title="SAP Profitability and Performance Management (PaPM)">
+              SAP Profitability and Performance Management (PaPM)
+            </span>
             <span class="badge">In Progress</span>
-          </h3>
-          <ul class="project-list">
-            <li>
-              <a href="#" target="_blank">
-                DA180 - <em>Explore SAP Datasphere and SAP Analytics Cloud End-to-End</em>
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank">Customer & Product Master Data Modeling</a>
-            </li>
-            <li>
-              <a href="#" target="_blank">Data Integration & Transformation using SAP sample datasets</a>
-            </li>
-          </ul>
-          <p class="evidence">
-            <a href="#" target="_blank">📄 Documentation</a> ·
-            <a href="#" target="_blank">📁 GitHub</a>
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>
-            <i class="fa-solid fa-chart-pie"></i>
-            SAP Analytics Cloud (SAC)
-            <span class="badge">In Progress</span>
-          </h3>
-          <ul class="project-list">
-            <li><a href="#" target="_blank">Interactive Story for Sales & Margin Analysis</a></li>
-            <li>
-              <a href="#" target="_blank">
-                Basic Planning Model – <i>Version management & data entry</i>
-              </a>
-            </li>
-            <li><a href="#" target="_blank">Live Connection Dashboard using SAP BW / Datasphere</a></li>
-          </ul>
-          <p class="evidence">
-            <a href="#" target="_blank">📄 Documentation</a> ·
-            <a href="#" target="_blank">📁 GitHub</a>
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>
-            <i class="fa-solid fa-code"></i>
-            DataCamp
-            <span class="badge">In Progress</span>
-          </h3>
-          <ul class="project-list">
-            <li><a href="#" target="_blank">Introduction to Python for Data Science</a></li>
-            <li><a href="#" target="_blank">SQL Fundamentals</a></li>
-            <li><a href="#" target="_blank">Power BI for Business Analysts</a></li>
-          </ul>
-          <p class="evidence">
-            <a href="#" target="_blank">📄 Certificates</a> ·
-            <a href="#" target="_blank">📁 Profile</a>
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>
-            <i class="fa-solid fa-video"></i>
-            Udemy
-            <span class="badge">In Progress</span>
-          </h3>
-          <ul class="project-list">
-            <li><a href="#" target="_blank">SAP Analytics Cloud Full Course</a></li>
-            <li><a href="#" target="_blank">SAP PaPM - Beginner to Advanced</a></li>
-            <li><a href="#" target="_blank">SAP BW on HANA Hands-on</a></li>
-          </ul>
-          <p class="evidence">
-            <a href="#" target="_blank">📄 Certificates</a> ·
-            <a href="#" target="_blank">📁 Profile</a>
-          </p>
-        </div>
-
+          </div>
+        </h3>
+        <p>Modeling profitability logic, allocation cycles, and performance insights.</p>
       </div>
-    </section>
 
-    <section>
-  <h2>Analytics & Business Intelligence Skills</h2>
-
-  <div class="skills-grid">
-
-    <div class="card">
-      <h3>
-        <i class="fa-solid fa-cogs"></i>
-        SAP Profitability and Performance Management (PaPM)
-        <span class="badge">In Progress</span>
-      </h3>
-      <ul class="project-list">
-        <li><a href="#" target="_blank">PaPM Hands-on Project</a></li>
-        <li><a href="#" target="_blank">Planning and Simulation Scenarios</a></li>
-        <li><a href="#" target="_blank">Cost and Revenue Allocation Models</a></li>
-      </ul>
-      <p class="evidence">
-        <a href="#" target="_blank">📄 Documentation</a> ·
-        <a href="#" target="_blank">📁 GitHub</a>
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>
-        <i class="fa-solid fa-database"></i>
-        SAP BW on HANA
-        <span class="badge">In Progress</span>
-      </h3>
-      <ul class="project-list">
-        <li><a href="#" target="_blank">Data Modeling with ADSO</a></li>
-        <li><a href="#" target="_blank">BW-IP Planning Functions</a></li>
-        <li><a href="#" target="_blank">Advanced Query Design</a></li>
-      </ul>
-      <p class="evidence">
-        <a href="#" target="_blank">📄 Documentation</a> ·
-        <a href="#" target="_blank">📁 GitHub</a>
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>
-        <i class="fa-solid fa-chart-bar"></i>
-        SAP BusinessObjects (BOBJ)
-        <span class="badge">In Progress</span>
-      </h3>
-      <ul class="project-list">
-        <li><a href="#" target="_blank">Web Intelligence Reports</a></li>
-        <li><a href="#" target="_blank">Universe Design</a></li>
-        <li><a href="#" target="_blank">Dashboard Integration</a></li>
-      </ul>
-      <p class="evidence">
-        <a href="#" target="_blank">📄 Documentation</a> ·
-        <a href="#" target="_blank">📁 GitHub</a>
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>
-        <i class="fa-solid fa-chart-pie"></i>
-        SAP Analytics Cloud (SAC)
-        <span class="badge">In Progress</span>
-      </h3>
-      <ul class="project-list">
-        <li><a href="#" target="_blank">Interactive Dashboards</a></li>
-        <li><a href="#" target="_blank">Planning Models</a></li>
-        <li><a href="#" target="_blank">Live Data Connections</a></li>
-      </ul>
-      <p class="evidence">
-        <a href="#" target="_blank">📄 Documentation</a> ·
-        <a href="#" target="_blank">📁 GitHub</a>
-      </p>
-    </div>
-
-  </div>
-</section>
-
-    <section>
-      <h2>Connect With Me</h2>
-      <div class="social-links" role="navigation" aria-label="Social Media Links">
-        <a href="mailto:narishshairah.cataquiz@gmail.com" aria-label="Send Email">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/narishairah" target="_blank" rel="noopener" aria-label="GitHub Profile">
-          <i class="fa-brands fa-github"></i>
-        </a>
+      <div class="card">
+        <h3>
+          <i class="fa-solid fa-database"></i>
+          <div class="card-title-row">
+            <span title="SAP BW on HANA">SAP BW on HANA</span>
+            <span class="badge">In Progress</span>
+          </div>
+        </h3>
+        <p>Data modeling, ADSOs, transformations, and performance-optimized reporting.</p>
       </div>
-    </section>
 
-  </main>
+      <div class="card">
+        <h3>
+          <i class="fa-solid fa-chart-bar"></i>
+          <div class="card-title-row">
+            <span title="SAP BusinessObjects (BOBJ)">
+              SAP BusinessObjects (BOBJ)
+            </span>
+            <span class="badge">In Progress</span>
+          </div>
+        </h3>
+        <p>Enterprise reporting using WebI and legacy BI tools.</p>
+      </div>
 
-  <footer>
-    <p style="text-align:center; font-size:14px; color:#ccc; padding:16px 0;">
-      &copy; 2026 Narish Shairah Cataquiz — All rights reserved.
-    </p>
-  </footer>
+      <div class="card">
+        <h3>
+          <i class="fa-solid fa-chart-pie"></i>
+          <div class="card-title-row">
+            <span title="SAP Analytics Cloud (SAC)">
+              SAP Analytics Cloud (SAC)
+            </span>
+            <span class="badge">In Progress</span>
+          </div>
+        </h3>
+        <p>Story creation, dashboards, planning models, and analytics.</p>
+      </div>
 
-  <script>
-    const toggleBtn = document.getElementById('darkToggle');
-    const body = document.body;
+    </div>
+  </section>
 
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
+  <!-- ===== CONNECT ===== -->
+  <section class="connect-section">
+    <h2>Connect With Me</h2>
+    <div class="social-links">
+      <a href="mailto:narishshairah.cataquiz@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/narishairah" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+  </section>
 
-      // Update button icon and text
-      if (body.classList.contains('dark-mode')) {
-        toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
-      } else {
-        toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode';
-      }
-    });
-  </script>
 </body>
 </html>
