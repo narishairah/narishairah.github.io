@@ -42,143 +42,178 @@
   />
 
   <style>
+    /* Fonts and base */
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #f7f8fa;
-      color: #222;
-      font-size: 15px;
+      background: linear-gradient(135deg, #f0f4ff, #e0e8ff);
+      color: #2c3e50;
+      font-size: 16px;
       line-height: 1.7;
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: background 0.4s ease, color 0.4s ease;
+      min-height: 100vh;
     }
 
+    /* Header with vibrant gradient */
     header {
-      background: #0a2540;
+      background: linear-gradient(90deg, #0066ff, #00ccff);
       color: #fff;
       padding: 56px 24px;
       text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+      position: relative;
+      overflow: visible;
     }
 
     header h1 {
-      margin: 0 0 8px;
-      font-size: 34px;
-      font-weight: 600;
+      margin: 0 0 12px;
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
     }
 
     header p {
       margin: 0;
-      font-size: 16px;
-      opacity: 0.9;
+      font-size: 18px;
+      opacity: 0.85;
+      font-weight: 500;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
     }
 
     /* Dark Mode Toggle Button */
     #darkToggle {
-      margin-top: 16px;
-      padding: 10px 18px;
-      border-radius: 12px;
+      margin-top: 20px;
+      padding: 12px 22px;
+      border-radius: 24px;
       border: 2px solid #ffffffcc;
       cursor: pointer;
-      font-size: 16px;
-      background: #0a2540;
+      font-size: 17px;
+      background: rgba(255,255,255,0.2);
       color: #fff;
       font-weight: 600;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(0, 204, 255, 0.4);
+      transition: all 0.3s ease;
       user-select: none;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      filter: drop-shadow(0 0 2px rgba(0,255,255,0.7));
     }
 
     #darkToggle:hover, #darkToggle:focus {
-      background: #084298;
-      border-color: #ffffff;
+      background: #00d1ff;
+      border-color: #00eaff;
+      box-shadow: 0 6px 24px rgba(0, 229, 255, 0.7);
       outline: none;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      filter: drop-shadow(0 0 6px rgba(0,229,255,0.9));
+      transform: scale(1.05);
+    }
+
+    #darkToggle i {
+      font-size: 20px;
+      transition: transform 0.4s ease;
+    }
+
+    /* Animate icon on toggle */
+    body.dark #darkToggle i {
+      transform: rotate(180deg);
+      color: #ffd93b;
+      filter: drop-shadow(0 0 5px #ffd93b);
     }
 
     main {
       max-width: 1600px;
       width: 90%;
       margin: 0 auto;
-      padding: 40px 24px;
+      padding: 48px 24px 80px;
     }
 
     section {
-      margin-bottom: 56px;
+      margin-bottom: 64px;
     }
 
     h2 {
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 20px;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 24px;
       padding-bottom: 8px;
-      border-bottom: 1px solid #dbe2ea;
-      color: #0a2540;
+      border-bottom: 3px solid #00aaff;
+      color: #004a75;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
       transition: color 0.3s ease, border-color 0.3s ease;
     }
 
-    /* Fiori-like cards */
+    /* Cards with subtle shadows and gradient backgrounds */
     .card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      background: linear-gradient(145deg, #ffffff, #e6f0ff);
+      border-radius: 20px;
+      padding: 28px 30px;
+      box-shadow: 0 6px 18px rgba(0, 102, 255, 0.15);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
+      cursor: default;
     }
 
     .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transform: translateY(-6px);
+      box-shadow: 0 14px 32px rgba(0, 102, 255, 0.3);
+      background: linear-gradient(145deg, #e0f3ff, #c6e4ff);
     }
 
     .card h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 0 0 12px;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 16px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
+      gap: 14px;
+      color: #0066cc;
+      user-select: none;
     }
 
     .card h3 i {
-      color: #0b5ed7;
+      color: #007aff;
+      font-size: 24px;
       transition: color 0.3s ease;
     }
 
     .card ul {
-      padding-left: 20px;
-      margin: 0;
+      padding-left: 22px;
+      margin: 0 0 14px;
+      color: #114b8b;
     }
 
     .project-list {
-      padding-left: 18px;
-      margin: 12px 0;
+      padding-left: 22px;
+      margin: 14px 0;
+      color: #1a3c6a;
+      font-weight: 500;
     }
 
     .project-list li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .project-list a {
-      color: #1f4fd8;
+      color: #007aff;
       text-decoration: none;
-      font-weight: 400;
+      font-weight: 600;
       transition: color 0.3s ease;
     }
 
     .project-list a:hover {
+      color: #005bb5;
       text-decoration: underline;
     }
 
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 32px;
+      gap: 36px;
     }
 
     /* Wider grid: 3 columns on large screens */
@@ -196,59 +231,81 @@
     }
 
     .badge {
-      background: #eef5ff;
-      color: #0b5ed7;
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 8px;
+      background: #00aaff;
+      color: #fff;
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 12px;
       white-space: nowrap;
-      transition: background 0.3s ease, color 0.3s ease;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+      box-shadow: 0 3px 12px rgba(0,170,255,0.6);
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+
+    .badge:hover {
+      background: #007acc;
+      box-shadow: 0 4px 18px rgba(0,120,204,0.7);
     }
 
     .evidence {
-      margin-top: 12px;
-      font-size: 14px;
+      margin-top: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #007acc;
     }
 
     .evidence a {
-      color: #0b5ed7;
-      font-weight: 500;
+      color: #007acc;
+      font-weight: 700;
       transition: color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .evidence a:hover {
+      color: #004a7c;
+      text-decoration: underline;
     }
 
     footer {
       text-align: center;
-      padding: 24px;
-      font-size: 14px;
-      color: #555;
-      transition: color 0.3s ease;
+      padding: 28px 24px;
+      font-size: 15px;
+      color: #0066cc;
+      font-weight: 600;
+      background: linear-gradient(90deg, #007aff, #00ccff);
+      box-shadow: 0 -4px 14px rgba(0, 204, 255, 0.25);
+      letter-spacing: 0.8px;
+      user-select: none;
+      transition: background 0.4s ease, color 0.4s ease;
     }
 
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 24px;
-      margin-top: 16px;
+      gap: 28px;
+      margin-top: 22px;
     }
 
     .social-links a {
-      width: 56px;
-      height: 56px;
+      width: 60px;
+      height: 60px;
       background: #ffffff;
-      border-radius: 14px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 26px;
-      color: #0b5ed7;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      transition: all 0.2s ease;
+      font-size: 30px;
+      color: #007aff;
+      box-shadow: 0 6px 20px rgba(0,122,255,0.35);
+      transition: all 0.3s ease;
     }
 
     .social-links a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      color: #084298;
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 12px 36px rgba(0,122,255,0.6);
+      color: #005bb5;
     }
 
     /* Learning Platforms spacing */
@@ -257,36 +314,38 @@
     }
 
     .learning-platforms .card {
-      padding: 28px;
+      padding: 30px;
     }
 
     .learning-platforms ul li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     /* Dark mode styles */
     body.dark {
-      background: #0b1220;
-      color: #e5e7eb;
+      background: linear-gradient(135deg, #1a1f36, #0a0e1a);
+      color: #cbd5e1;
     }
 
     body.dark header {
-      background: #020617;
+      background: linear-gradient(90deg, #0a2342, #004f80);
+      box-shadow: 0 4px 12px rgba(0, 100, 255, 0.7);
     }
 
     body.dark h2 {
-      color: #93c5fd;
-      border-color: #1e293b;
+      color: #60a5fa;
+      border-color: #2563eb;
     }
 
     body.dark .card {
-      background: #020617;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      background: linear-gradient(145deg, #121829, #1e2a4d);
+      box-shadow: 0 10px 28px rgba(0, 102, 255, 0.8);
     }
 
     body.dark .badge {
-      background: #1e293b;
-      color: #93c5fd;
+      background: #2563eb;
+      color: #dbeafe;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.9);
     }
 
     body.dark a {
@@ -294,36 +353,32 @@
     }
 
     body.dark footer {
-      color: #94a3b8;
+      color: #93c5fd;
+      background: linear-gradient(90deg, #2563eb, #3b82f6);
+      box-shadow: 0 -6px 20px rgba(59, 130, 246, 0.4);
     }
 
     body.dark .card h3 i {
-      color: #93c5fd;
+      color: #60a5fa;
     }
 
     body.dark .project-list a {
-      color: #93c5fd;
+      color: #60a5fa;
     }
 
     body.dark .evidence a {
-      color: #93c5fd;
+      color: #60a5fa;
     }
 
     body.dark .social-links a {
-      background: #1e293b;
+      background: #1e40af;
       color: #93c5fd;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      box-shadow: 0 8px 28px rgba(37, 99, 235, 0.7);
     }
 
     body.dark .social-links a:hover {
       color: #bfdbfe;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.6);
-    }
-
-    /* Center the "Connect with Me" content */
-    section h2 + .social-links {
-      justify-content: center;
-      text-align: center;
+      box-shadow: 0 12px 36px rgba(37, 99, 235, 0.9);
     }
   </style>
 </head>
@@ -460,92 +515,4 @@
         <li>Analytics, reporting & visualization concepts</li>
         <li>Supplementary technical upskilling</li>
       </ul>
-      <p class="evidence">
-        Practical, topic-focused learning to complement SAP projects
-      </p>
-    </div>
-
-  </div>
-</section>
-  
-<section>
-  <h2>Skills</h2>
-
-  <div class="skills-grid">
-
-    <div class="card">
-      <h3><i class="fa-solid fa-chart-line"></i> Business Intelligence & Analytics</h3>
-      <ul>
-        <li>Modeling (SAP BW on HANA, BW-IP, SAP PaPM)</li>
-        <li>Extraction (SAP S/4HANA, SAP ECC)</li>
-        <li>Reporting (SAP BOBJ, BW Queries, SAP AFO)</li>
-        <li>Data validation & reconciliation</li>
-        <li>Planning and simulation</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3><i class="fa-solid fa-database"></i> Data Management</h3>
-      <ul>
-        <li>ETL processes & data mapping</li>
-        <li>Roles & authorizations</li>
-        <li>SQL aggregates & window functions</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3><i class="fa-solid fa-headset"></i> L2 AMS Technical & Support</h3>
-      <ul>
-        <li>Monitoring & troubleshooting</li>
-        <li>End-user analysis & support</li>
-        <li>Documentation improvement</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3><i class="fa-solid fa-ticket"></i> Ticketing Tools</h3>
-      <ul>
-        <li>JIRA</li>
-        <li>ServiceNow</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <h2>Connect with Me</h2>
-
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/narishcataquiz/" target="_blank" aria-label="LinkedIn">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/narishairah/" target="_blank" aria-label="GitHub">
-      <i class="fa-brands fa-github"></i>
-    </a>
-  </div>
-
-</section>
-
-</main>
-
-<footer>
-  © 2025 Narish · Built as a hands-on learning portfolio
-</footer>
-
-<script>
-  const toggle = document.getElementById('darkToggle');
-  const body = document.body;
-
-  toggle.addEventListener('click', () => {
-    body.classList.toggle('dark');
-    if (body.classList.contains('dark')) {
-      toggle.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
-    } else {
-      toggle.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode';
-    }
-  });
-</script>
-
-</body>
-</html>
+     
